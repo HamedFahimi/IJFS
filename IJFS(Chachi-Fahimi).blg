@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99e
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: IJFS(Chachi-Fahimi).aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+Database file #1: mybibfile.bib
+You're missing a field name---line 1151 of file mybibfile.bib
+ : 
+ : %  month         = Jun # " 27--30,",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1175 of file mybibfile.bib
+ :   
+ :   volume        = "",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 2721 of file mybibfile.bib
+ :   
+ :   %address       = "Taipei, Taiwan",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You've used 31 entries,
+            2118 wiz_defined-function locations,
+            712 strings with 8288 characters,
+and the built_in function-call counts, 10369 in all, are:
+= -- 1048
+> -- 450
+< -- 7
++ -- 184
+- -- 142
+* -- 734
+:= -- 1735
+add.period$ -- 95
+call.type$ -- 31
+change.case$ -- 156
+chr.to.int$ -- 0
+cite$ -- 31
+duplicate$ -- 386
+empty$ -- 814
+format.name$ -- 142
+if$ -- 2147
+int.to.chr$ -- 0
+int.to.str$ -- 31
+missing$ -- 35
+newline$ -- 158
+num.names$ -- 66
+pop$ -- 129
+preamble$ -- 1
+purify$ -- 129
+quote$ -- 0
+skip$ -- 268
+stack$ -- 0
+substring$ -- 767
+swap$ -- 68
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 116
+warning$ -- 0
+while$ -- 111
+width$ -- 33
+write$ -- 348
+(There were 3 error messages)

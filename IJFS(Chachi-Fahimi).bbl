@@ -1,0 +1,183 @@
+\begin{thebibliography}{10}
+
+\bibitem{Are19}
+M.~Arefi.
+\newblock Quantile fuzzy regression based on fuzzy outputs and fuzzy.
+\newblock {\em Soft Computing}, 24:311--320, 2020.
+
+\bibitem{Are14}
+M.~Arefi and S.~M. Taheri.
+\newblock Least squares regression based on atanassov's intuitionistic fuzzy
+  inputs-outputs and atanassov's intuitionistic fuzzy parameters.
+\newblock {\em IEEE Transactions on Fuzzy Systems}, 23:1142--1154, 2015.
+
+\bibitem{Asa21}
+M.~Asadolahi, M.~G. Akbari, G.~Hesamian, and M.~Arefi.
+\newblock A robust support vector regression with exact predictors and fuzzy
+  responses.
+\newblock {\em International Journal of Approximate Reasoning}, 2021.
+
+\bibitem{Cel87}
+A.~Celmin\v{s}.
+\newblock Multidimensional least-squares fitting of fuzzy models.
+\newblock {\em Journal of Mathematical Modeling}, 9:669--690, 1987.
+
+\bibitem{Cha19}
+J.~Chachi.
+\newblock A weighted least squares fuzzy regression for crisp input-fuzzy
+  output data.
+\newblock {\em IEEE Transactions on Fuzzy Systems}, 27(4):739--748, 2019.
+
+\bibitem{Cha21c}
+J.~Chachi, A.~Kazemifard, and M.~Jalalvand.
+\newblock A multi-attribute assessment of fuzzy regression models.
+\newblock {\em Iranian Journal of Fuzzy Systems}, 4, 2021.
+
+\bibitem{Cha17}
+J.~Chachi and M.~Roozbeh.
+\newblock A fuzzy robust regression approach applied to bedload transport data.
+\newblock {\em Communications in Statistics-Simulation and Computation},
+  47(3):1703--1714, 2017.
+
+\bibitem{Cha21a}
+J.~Chachi and S.~M. Taheri.
+\newblock Outliers detection in fuzzy regression models.
+\newblock In Shahnaz~N. Shahbazova, Janusz Kacprzyk, Valentina~Emilia Balas,
+  and Vladik Kreinovich, editors, {\em Recent Developments and the New
+  Direction in Soft-Computing Foundations and Applications}, volume 393 of {\em
+  Studies in Fuzziness and Soft Computing}, chapter~24, pages 299--308.
+  Springer, Cham, Switzerland AG, 2021.
+
+\bibitem{Cha14}
+J.~Chachi, S.~M. Taheri, and N.~R. Arghami.
+\newblock A hybrid fuzzy regression model and its application in hydrology
+  engineering.
+\newblock {\em Applied Soft Computing}, 25:149--158, 2014.
+
+\bibitem{Cha16b}
+J.~Chachi, S.~M. Taheri, S.~Fattahi, and S.~A.~Hosseini Ravandi.
+\newblock Two robust fuzzy regression models and their application in
+  predicting imperfections of cotton yarn.
+\newblock {\em Journal of Textiles and Polymers}, 4(2):60--68, 2016.
+
+\bibitem{Cha16a}
+J.~Chachi, S.~M. Taheri, and H.~Rezaei Pazhand.
+\newblock Suspended load estimation using $l_1$-fuzzy regression, $l_2$-fuzzy
+  regression and mars-fuzzy regression models.
+\newblock {\em Hydrological Sciences Journal}, 61(8):1489--1502, 2016.
+
+\bibitem{Chu19}
+N.~Chukhrova and A.~Johannssen.
+\newblock Fuzzy regression analysis: Systematic review and bibliography.
+\newblock {\em Applied Soft Computing}, 84:105708, 2019.
+
+\bibitem{Dei18}
+Paul Deitel and Harvey~M. Deitel.
+\newblock {\em Java How to Program, Early Objects, 11th Edition}.
+\newblock Pearson, NJ, 2018.
+
+\bibitem{Dia88}
+P.~Diamond.
+\newblock Fuzzy least squares.
+\newblock {\em Information Sciences}, 46:141--157, 1988.
+
+\bibitem{Dur03}
+P.~D'Urso.
+\newblock Linear regression analysis for fuzzy/crisp input and fuzzy/crisp
+  output data.
+\newblock {\em Computational Statistics and Data Analysis}, 42:47--72, 2003.
+
+\bibitem{Dur00}
+P.~D'Urso and T.~Gastaldi.
+\newblock A least-squares approach to fuzzy linear regression analysis.
+\newblock {\em Computational Statistics and Data Analysis}, 34:427--440, 2000.
+
+\bibitem{Dur13}
+P.~D'Urso and R.~Massari.
+\newblock Weighted least squares and least median squares estimation for the
+  fuzzy linear regression analysis.
+\newblock {\em Metron}, 71:279--306, 2013.
+
+\bibitem{Dur11}
+P.~D'Urso, R.~Massari, and A.~Santoro.
+\newblock Robust fuzzy regression analysis.
+\newblock {\em Information Sciences}, 181:4154--4174, 2011.
+
+\bibitem{Hes20a}
+G.~Hesamian and M.~G. Akbari.
+\newblock A robust varying coefficient approach to fuzzy multiple regression
+  model.
+\newblock {\em Journal of Computational and Applied Mathematics}, 375:1--13,
+  2020.
+
+\bibitem{Hes20b}
+Gholamreza Hesamian and Mohammad~Ghasem Akbari.
+\newblock A robust multiple regression model based on fuzzy random variables.
+\newblock {\em Journal of Computational and Applied Mathematics}, page 113270,
+  2020.
+
+\bibitem{Hub09}
+P.~Huber and E.~M. Ronchetti.
+\newblock {\em Robust Statistics}.
+\newblock 2ed., Wiley, Hoboken, NJ, 2009.
+
+\bibitem{Hwa81}
+C.~Hwang and K.~Yoon.
+\newblock {\em Multiple Attribute Decision Making: Methods and Applications}.
+\newblock Springer-Verlag, NY, 1981.
+
+\bibitem{Kha20}
+A.~H. Khammar, M.~Arefi, and M.~G. Akbari.
+\newblock A robust least-squares fuzzy regression model based on kernel
+  function.
+\newblock {\em Iranian Journal of Fuzzy Systems}, 17(4):105--119, 2020.
+
+\bibitem{Kha21a}
+A.~H. Khammar, M.~Arefi, and M.~G. Akbari.
+\newblock A general approach to fuzzy regression models based on different loss
+  functions.
+\newblock {\em Soft Computing}, 25:835--849, 2021.
+
+\bibitem{Kha21b}
+A.~H. Khammar, M.~Arefi, and M.~G. Akbari.
+\newblock Quantile fuzzy varying coefficient regression based on kernel
+  function.
+\newblock {\em Applied Soft Computing}, 107:107313, 2021.
+
+\bibitem{Kli02}
+G.~Klir and B.~Yuan.
+\newblock {\em Fuzzy Sets and Fuzzy Logic: Theory and Applications}.
+\newblock Prentice-Hall, Taiwan, 2002.
+
+\bibitem{Les15}
+J.~M. Leski and M.~Kotas.
+\newblock On robust fuzzy c-regression models.
+\newblock {\em Fuzzy Sets and Systems}, 279:112--129, 2015.
+
+\bibitem{Moh04}
+J.~Mohammadi and S.M. Taheri.
+\newblock Pedomodels fitting with fuzzy least squares regression.
+\newblock {\em Iranian Journal of Fuzzy Systems}, 1:45--62, 2004.
+
+\bibitem{Cha21b}
+S.~M. Taheri and J.~Chachi.
+\newblock A robust variable-spread fuzzy regression model.
+\newblock In Shahnaz~N. Shahbazova, Janusz Kacprzyk, Valentina~Emilia Balas,
+  and Vladik Kreinovich, editors, {\em Recent Developments and the New
+  Direction in Soft-Computing Foundations and Applications}, volume 393 of {\em
+  Studies in Fuzziness and Soft Computing}, chapter~25, pages 309--320.
+  Springer, Cham, Switzerland AG, 2021.
+
+\bibitem{Xu01}
+R.~Xu and C.~Li.
+\newblock Multidimensional least-squares fitting with a fuzzy model.
+\newblock {\em Fuzzy Sets and Systems}, 119:215--223, 2001.
+
+\bibitem{Yag88}
+R.~R. Yager.
+\newblock On ordered weighted averaging aggregation operators in multicriteria
+  decision making.
+\newblock {\em IEEE Transactions on Fuzzy Systems, Man and Cybernetics},
+  18(1):183--190, 1988.
+
+\end{thebibliography}

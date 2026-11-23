@@ -1,0 +1,1066 @@
+\documentclass{IJFS}
+
+
+    \usepackage{amsmath}
+    \usepackage{amsthm}
+    \usepackage{amssymb}
+    \usepackage{latexsym}
+    \usepackage{rotating}
+    \usepackage{tabulary}
+    \usepackage{array}
+    \usepackage{booktabs}
+    \usepackage[running,mathlines]{lineno}
+    \usepackage[caption=false,font=footnotesize]{subfig}
+    \usepackage{eqparbox}
+    \usepackage{mdwmath}
+    \usepackage{array}
+%    \usepackage{algorithm}
+    \usepackage{algorithmic}
+    \usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+%   \usepackage[cmex10]{amsmath}
+%   \usepackage{mdwtab}
+%   \usepackage{graphicx}
+
+
+\usepackage{amsfonts,amsthm,amsmath,amssymb,dsfont}
+\usepackage{amsmath,    enumitem}
+\usepackage{graphicx}
+\usepackage{color}
+%\usepackage[colorlinks]{hyperref}
+%\usepackage[all]{xy}
+%\usepackage{subfigure}
+%\usepackage{tikz}
+%\usetikzlibrary[arrows,shapes,graphs,decorations.pathmorphing,backgrounds,positioning,fit,petri]
+\usepackage{amscd,   eufrak}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{verbatim}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+ \def\dis{\displaystyle}
+
+\begin{document}
+\linenumbers
+\addtocounter{page}{0}
+
+\titleijfs{Outlier Detection in Fuzzy Regression Modeling: A Multi-Objective Optimization Technique}
+
+\author[1]{Jalal Chachi\footnote{https://orcid.org/0000-0003-1883-5113}}
+\author[2]{Hamed Fahimi\footnote{https://orcid.org/0000-0003-????-????}}
+%\author[3]{Jalal Chachi\footnote{https://orcid.org/0000-0003-1883-5113}}
+\affil[1]{Faculty of Mathematical Sciences and Computer, Department of Statistics, Shahid Chamran University of Ahvaz, Ahvaz, Iran}
+\affil[2]{Faculty of Mathematical Sciences, Ferdowsi University of Mashhad, Mashhad, IRAN}
+
+\emails{jalal.chachi@scu.ac.ir; hamedfahimi@um.ac.ir}
+
+\CorrespondAuthor{Jalal Chachi}
+
+\oddPageHead{A New Kernel-Based Fuzzy Varying Coefficients Regression Model: Fuzzy Input-Output Data}
+\evenPageHead{J. Chachi and H. Fahimi}
+
+\abstractijfs{Seeking high goodness-of-fit criteria values by improving estimation process and cutting down the influences of outliers is the main goal of this paper mainly focused on the topic of fuzzy regression analysis.
+However, achieving this aim involves the realization of several conflicting objectives which might be complex in nature.
+In estimation techniques the robust process is the most vital step which uses hybrid algorithms with high accuracy to reduce the overall disruptive effects of outliers while improving the accuracy of prediction.
+The aim of this study is to propose new algorithms and modeling technique in the robust process to maximize efficiency of fuzzy regression models while considering outliers in the dataset, avoiding disruptive effects of them, and not scarifying the prediction accuracy.
+To this aim, a new approach is introduced to estimate the parameters of the fuzzy regression model in which truncated sum of ordered errors differently being aggregated to be considered as objective functions.
+In this way, the multi-objective optimization method is used to develop a set of mathematical models.
+Based on divide and conquer paradigm, an algorithm is proposed in details which explains how to find the optimum solution among these conflicting objective functions.
+The proposed algorithm uses a very fast new sorting technique that is very useful finding the optimal solutions in big dimensional dataset.
+The results show that by using the proposed technique how the efficiency of the model will be highly improved.
+The efficiency and performance of the proposed method are then compared against several robust methods based on crisp input-fuzzy output data derived from the simulated and real-valued experiments.
+}
+
+\keywords_ijfs{Fuzzy data,
+Robust fuzzy regression,
+Outlier detection,
+Divide and Conquer paradigm,
+Multi-objective.
+\vspace{1mm}\\
+{\it 2010 MSC}: 62J86, 90B50.
+}
+
+\Vol{*}	\No{*}	\Year{****}	\Pages{**}
+\Received{**}	\Revised{**}		\Accepted{**}
+
+{\let\newpage\relax\vspace*{.1mm}
+\noindent\rule{\textwidth}{.3mm}\maketitle}
+
+\thispagestyle{fancylogo}
+
+\mabstract
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction and Motivation}
+{R}{obust}
+estimation processes and outlier detection methods have become increasingly important priorities for the most important statistical topics and techniques specially on the topic of fuzzy regression analysis \cite{Dur11,Are19,Cha19}.
+However, satisfying the objectives of robustness simultaneously and completely are  complex in nature.
+To address these limitations, in the present study an approach will be introduced to fuzzy regression analysis.
+%Here, we have a collection of alternatives from which we must choose one.
+%Associated with each alternative is an uncertainty profile consisting of the set of possible outcomes that can occur if we choose this alternative.
+%along with some indication of the uncertainty associated with the outcomes.
+%The method uses to aggregate the information in the uncertainty profile must reflect aspects of the decision attitude of the decision maker.
+%One commonly used technique to aggregate the information in the uncertainty profile is to obtain the representative values that can be used to compare the alternatives.
+One important situation considered in the present study  occurs in determining outliers.
+Although, many possible choices exist for the formulation and determination outlier values \cite{Dur11,Cha19,Cha21c}, it must be noted  each observation value can be considered as an outlier in some sense.
+Many papers are recently  devoted to this methodology \cite{Chu19}, for instance,
+%Many of the recently published key research and applications  papers on this topic are cited by.
+%For instance,
+%To address some of them,
+%Kelkinnama and Taheri \cite{Kel12}
+%proposed a fuzzy least-absolutes regression using shape preserving operations.
+%Ferraro and Giordani \cite{Fer13}  dealt with robustness in the field of regression analysis for imprecise information managed in terms of fuzzy sets.
+%Varga  \cite{Var07}
+%presented
+%robust estimation approaches to  fuzzy and non-fuzzy  regression models.
+%Nasrabadi and Hashemi  \cite{Nas08}
+%suggested a robust nonlinear fuzzy regression model using multilayered feedforward neural networks. %where weights, biases, input and output variables were assumed to be   fuzzy.
+%Kula and Apaydin  \cite{Kul08}
+%proposed    a robust fuzzy regression analysis based on the ranking of fuzzy sets.
+%Using genetic algorithms, Hu \cite{Hu09,Hu14} represented robust interval regression models.
+%With the help of  hyperelliptic functions and possibility maximization, Yabuuchi and Watada \cite{Yab96,Yab11} developed some robust fuzzy regression models.
+%Yang et al. \cite{Yan13}
+%present a robustified fuzzy varying coefficient model for fuzzy input-fuzzy output variables.
+%Shakouri and Nadimi \cite{Sha13}
+%investigated a method for outlier detection in fuzzy linear regression problems.
+D'Urso et al.  \cite{Dur11} and D'Urso and Massari  \cite{Dur13}
+proposed a robust fuzzy linear regression model based on the least median squares-weighted least-squares  estimation procedure.
+%D'Urso and Massari  \cite{Dur13} proposed weighted least-squares and least median squares estimation for fuzzy linear regression analysis.
+Leski and  Kotas \cite{Les15},
+based on the Huber's M-estimators \cite{Hub09} and OWA operators \cite{Yag88}, proposed a robust method in fuzzy regression modeling.
+Some robust methods in fuzzy regression modeling in predicting imperfections of cotton yarn and in  hydrology engineering were investigated by
+Chachi et al. \cite{Cha14,Cha16a,Cha16b} and
+Chachi and Roozbeh \cite{Cha17}.
+%Based on ridge methodology,
+%Akbari and Hesamian \cite{Akb18}
+%extended a kernel-fitting approach to estimate the parameters of a semi-parametric partial fuzzy regression model with fuzzy input-output data.
+Arefi \cite{Are19}
+investigated a robust quantile approach to estimate fuzzy parameters of  fuzzy regression model.
+Chachi \cite{Cha19}
+proposed a robustified version of weighted least-squares in fuzzy regression modeling.
+Khammar et al. \cite{Kha20,Kha21a,Kha21b}
+employed kernel functions to define several loss functions in fuzzy regression modeling.
+In the context of Multiple Attribute Decision Making \cite{Hwa81},
+Chachi et al. \cite{Cha21c}
+considered a decision technique for  fuzzy regression modeling problems  which handled the weak performances analysis of fuzzy regression modeling in the presence of
+outlier points.
+Asadolahi et al. \cite{Asa21}
+investigated a robust support vector machines with exact inputs and fuzzy output.
+Hesamian and  Akbari \cite{Hes20a,Hes20b}
+considered robust varying coefficient approaches to fuzzy regression based on fuzzy random variables.
+Chachi and Taheri \cite{Cha21a}
+investigated approaches to detect outlier points in fuzzy regression models (see also \cite{Cha21b,Chu19}).
+
+
+In most of the above researches, the outlier problem dealt with one of the two different points of view: Outlier detection and Robust estimation, which are not mutually exclusive.
+With regards to robust estimation \cite{Hub09}, as suggested by \cite{Dur11} a robust model should be considered both items.
+Determination of outlier values via a robust estimation are the problems arise in many estimation process which will be studied in details in this paper.
+Therefore, in the present study, we will mainly propose an algorithm that able us search the dataset in order to find and to label the unusual points while searching best solutions of the optimization problem.
+Here, first an aggregation process based on OWA operators \cite{Yag88} is used to obtain the objective functions.
+%It will be considered the situation for fuzzy regression modeling in order to formulate multi-objective programming problems.
+%The problem is solved by proposing an algorithm from which fuzzy regression models are generated.
+The proposed method investigates a new algorithm to determine  the fuzzy coefficients of the optimal fuzzy regression model.
+The  proposed algorithm employed on the dataset, tuning and mining the number of outliers as well as the determination of parameters for developing better model.
+%We applied a constraint technique to solve multi-objective optimization problems for  all combination of good dataset and bad dataset while fitting fuzzy regression models on them.
+%However, during the optimization process, preference information are needed to be provided by decision-makers and update them by considering current objective values, until the optimization results are satisfied.
+%The technique converts a multi-objective optimization problem into several constrained single objective problems by keeping one as an objective.
+%To obtain the optimal solution, decision makers have to vary the vector which labels the good dataset and bad dataset for each objective and conduct a new optimization process for each new vector.
+%In addition, decision makers also need to estimate the ideal objective vectors to address the outlier problem.
+%The estimation of the ideal objective vector involves the optimization of each objective at a time.
+The final optimal solution can be obtained in such a way that there is a significance difference between goodness-of-fit values of the generated fuzzy regression models on good dataset and bad dataset.
+%However, the estimation of the ideal objective vector is difficult especially for an arbitrary problem which maybe subjective in reality.
+%In addition, only one solution can be obtained based on a single objective function with a weighted combination of several objectives.
+%In reality, decision makers may wish to consider several optimal solutions simultaneously which are obtained under different scenarios as well as a vector of zero's and one's which labels the data points as  good or  bad data points.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Both compromise programming and �-constraint methods cannot generate entire Pareto fronts of multi-objective optimization problems in a single run and the final optimal solution cannot be obtained.
+%In addition, the selection of weight vectors and � vectors respectively in compromise programming and �-constraint methods is subjective.
+%Maeda (2001) formulated a fuzzy linear programming problem as a bi-criteria optimization problem by maximizing the upper and lower bounds of objective functions.
+%In line with Maeda�s work, Zhang et al. (2003) converted a fuzzy linear programming problem into a multi-objective optimization problem which involved the objective functions of maximizing the upper and lower bounds of n-dimensional fuzzy numbers.
+%Nasrabadi et al. (2005) developed a multi-objective fuzzy regression approach to address the outlier problem in which the objectives were to minimize
+%the spread of fuzzy outputs and the deviation from outliers.
+%In their study, several objective functions were converted into a single objective function by using a weighted sum method with pre-defined weights. Then, the single objective function was used in fuzzy regression analysis.
+%However, it is very difficult to assign the weights to individual objective functions in view of multiple conflicting objectives (Astolfi, Martelli  Pierobon, 2017).
+%In addition, only one solution can be obtained based on a single objective function with a weighted combination of several objectives.
+%In reality, decision makers may wish to consider several optimal solutions simultaneously which are obtained under different scenarios.
+%For example, decision makers would like to have another optimal solution under the scenario where the value of a particular objective function is required to be larger than the pre-defined value.
+%Rafiei and Ghoreyshi (2012) proposed a bi-objective goal programming model for fuzzy regression and an augmented �-constraint method was applied to solve the optimization problem.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+The rest of the paper is organized as follows.
+The main idea of the paper is explained in Section \ref{Prop} and Section \ref{Main_algorithm}.
+Section \ref{Prop} construct a fuzzy regression model for crisp input-fuzzy output data but fuzzy parameters, while
+Section \ref{Main_algorithm} introduces an algorithm for estimation of such the model.
+Section \ref{Exam}   reports illustrative simulated examples to demonstrate the effectiveness of the proposed model in the presence of outliers.
+Finally, Section \ref{Conc}  concludes the paper.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{A ????? approach to fuzzy regression models}\label{Prop}
+%\subsection{Formulation of model}
+The general form of a fuzzy regression model in fuzzy environment can be expressed as follows
+\begin{equation}\label{E1}
+\widetilde{y}   = \widetilde{f_{\boldsymbol{\alpha}}(\mathbf{x})}
+\end{equation}
+where
+\begin{enumerate}
+\item $\mathbf{x}=[1,x_1,\ldots,x_m]$
+%\begin{eqnarray*}
+%\mathbf{x}&=&[x_0,x_1,\ldots,x_m],\\
+%\mathbf{x}&=&[x_{i0},x_{i1},\ldots,x_{ip}],  i=1,\ldots,n; p<n; x_{i0}=1,
+%\end{eqnarray*}
+%\item
+or $\mathbf{x}=[1,\widetilde{x}_1,\ldots,\widetilde{x}_m]$ is a crisp input vector or is a fuzzy input vector.
+%\begin{eqnarray*}
+%\mathbf{\widetilde{x}}&=&[\widetilde{x}_0,\widetilde{x}_1,\ldots,\widetilde{x}_p],\\
+%\mathbf{x}&=&[x_{i0},x_{i1},\ldots,x_{ip}],  i=1,\ldots,n; p<n; x_{i0}=1,
+%\end{eqnarray*}
+\item $\mathbf{\widetilde{y}}=[\widetilde{y}_1,\ldots,\widetilde{y}_n]$  determines the vector value of the output variable.
+\item $\boldsymbol{\alpha}=[\alpha_0,\alpha_1,\ldots,\alpha_m]$  or $\boldsymbol{\alpha}=[\widetilde{\alpha}_0,\widetilde{\alpha}_1,\ldots,\widetilde{\alpha}_m]$ is a crisp  vector parameter or is a fuzzy  vector parameter.
+%\begin{eqnarray*}
+%\boldsymbol{\alpha}=[\alpha_0,\alpha_1,\ldots,\alpha_m],
+%\end{eqnarray*}
+\item $f_{\boldsymbol{\alpha}}(\cdot)$ determines the relationship  between input-output variables.
+\end{enumerate}
+In the literature,  several classical estimation methods of estimating the regression parameters, such as ordinary least-squares/least-absolutes, were put forwarded for the fuzzy regression model  (\ref{E1}) \cite{Cel87,Dia88,Chu19}.
+%Owing to their well accuracy, simplicity  and generalization, they have been used in many topics including fuzzy regression analysis \cite{Chu19}, clustering and classification problems \cite{Dur19}.
+%They have been often used with  datasets including outliers. %which heavily influences the results due to stability of predictive model accuracy when compared to several other approaches.
+In the presence of outliers, poor selection of model parameters of these techniques highly affects performances of them \cite{Dur11,Cha19}.
+
+Now assume that
+$(\widetilde{y}_1,\boldsymbol{x}_1),\ldots,(\widetilde{y}_n,\boldsymbol{x}_n)$ consists of $n$ observations
+where
+$\widetilde{y}_i=(y_i,l_i,r_i)_{LR}$  $(i=1,\ldots,n)$ is fuzzy output variable and
+$\boldsymbol{x}_i=[x_{0i},x_{1i},\ldots,  x_{mi}]$  $(i=1,\ldots, n; m<n; x_{0i}=1)$,
+is the crisp input variables.
+Now, in order to model the stated data, we first apply the following variable transformation to the dependent observed  variable
+\begin{eqnarray*}
+  (y,l,r)_{LR} \in \mathcal{F}(\mathbb{R}^3)  \rightarrow^{g}  (y,g(l),g(r)) \in \mathbb{R}^3,
+\end{eqnarray*}
+where $g:\Bbb{R}^+\rightarrow\Bbb{R}$ is an invertible function  \cite{Dur00,Dur03,Dur13}.
+Now the following transformed model is considered as a transformed relationship between $\widetilde{y}$ and $\boldsymbol{x}$
+\begin{eqnarray}\label{M1}
+(y,g(l),g(r))      &=&   \bigoplus_{j=0}^m(\vec{\Upsilon}_j\otimes x_j)\\
+                   &=& \vec{\Upsilon}_0 \oplus (\vec{\Upsilon}_1 \otimes x_1) \oplus\ldots \oplus (\vec{\Upsilon}_m\otimes x_m)\nonumber\\
+                   &=& (\alpha_0,\beta_0,\gamma_0) \oplus ((\alpha_1,\beta_1,\gamma_1) \otimes x_1)  \oplus \ldots\oplus ((\alpha_m,\beta_m,\gamma_m) \otimes x_m)\nonumber\\
+                   &=&  (\alpha_0+\alpha_1 x_1 + \ldots + \alpha_m x_m, \beta_0+\beta_1 x_1 + \ldots + \beta_m x_m,\gamma_0+\gamma_1 x_1 + \ldots + \gamma_m x_m).\nonumber
+\end{eqnarray}
+where $g:\Bbb{R}^+\rightarrow\Bbb{R}$ is an invertible function  \cite{Dur00,Dur03,Dur13}, and
+\begin{eqnarray*}
+\vec{\boldsymbol{\Upsilon}}  &=&(\vec{\Upsilon}_0,\vec{\Upsilon}_1,\ldots,\vec{\Upsilon}_m),\\
+\vec{\Upsilon}_j             &=&(\alpha_j,\beta_j,\gamma_j)\in\mathbb{R}^3, \qquad j=0,1,\ldots,m,
+\end{eqnarray*}
+Note that the following algebraic operations on elements
+$\vec{A} = (a, l_a, r_a) \in\mathbb{R}^3$  and  $\vec{B} = (b, l_b, r_b)\in\mathbb{R}^3$ is used
+\begin{eqnarray*}
+    \lambda \otimes  \vec{A}        & = & (\lambda a,\lambda l_a,\lambda r_a),\\
+    \lambda \oplus   \vec{A}        & = & (\lambda + a, l_a, r_a),\\
+    \vec{A} \oplus   \vec{B}        & = & (a + b, l_a+l_b,r_a+r_b),
+\end{eqnarray*}
+The estimated model is then obtained as
+\begin{eqnarray*}
+\widehat{(y,g(l),g(r))} &=&   \bigoplus_{j=0}^m(\widehat{\vec{\Upsilon}}_j\otimes x_j)\\
+                   &=& \widehat{\vec{\Upsilon}}_0 \oplus (\widehat{\vec{\Upsilon}}_1 \otimes x_1) \oplus\ldots \oplus (\widehat{\vec{\Upsilon}}_m\otimes x_m)\nonumber\\
+                   &=& (\widehat{\alpha}_0,\widehat{\beta}_0,\widehat{\gamma}_0) \oplus ((\widehat{\alpha}_1,\widehat{\beta}_1,\widehat{\gamma}_1) \otimes x_1)  \oplus \ldots\oplus ((\widehat{\alpha}_m,\widehat{\beta}_m,\widehat{\gamma}_m) \otimes x_m)\\
+                   &=&  (\widehat{\alpha}_0+\widehat{\alpha}_1 x_1 + \ldots + \widehat{\alpha}_m x_m, \widehat{\beta}_0+\widehat{\beta}_1 x_1 + \ldots + \widehat{\beta}_m x_m,  \widehat{\gamma}_0+\widehat{\gamma}_1 x_1 + \ldots + \widehat{\gamma}_m x_m).\nonumber
+\end{eqnarray*}
+Finally, the  fuzzy response variable can be modeled as
+\begin{eqnarray*}
+\widehat{\widetilde{y}}&=&(\widehat{y},\widehat{l},\widehat{r})_{LR} \\
+                       &=& (\widehat{\alpha}_0 +\widehat{\alpha}_1   x_1  + \ldots + \widehat{\alpha}_m  x_m, g^{-1}\{\widehat{\beta}_0+\widehat{\beta}_1 x_1 + \ldots + \widehat{\beta}_m x_m\},   g^{-1}\{\widehat{\gamma}_0+\widehat{\gamma}_1 x_1 + \ldots + \widehat{\gamma}_m x_m\})_{LR}.
+\end{eqnarray*}
+Here, the major process of estimating
+%$\widetilde{\boldsymbol{\alpha}}=[\widetilde{\alpha}_0,\widetilde{\alpha}_1,\ldots,\widetilde{\alpha}_m]$
+model (\ref{M1}) is described %including the formulation of a multi-objective optimization model,
+solving  an optimization problem introducing a new algorithm based on divide and conquer paradigm.
+The final solution of the algorithm will provide us the determination of a final optimal solution as well as detecting outlier points, minimizing the effect of outliers, tuning the number of outliers and minimizing modeling errors.
+Before we start to introduce the algorithm, we have to formalize the objective function as well as the optimization problem.
+The procedure is based on minimizing the truncated  sum of the ordered errors obtained with respect to the following error terms for $i=1,\ldots,n$
+\begin{eqnarray*}
+\mathcal{D}\left((y_i,g(l_i),h(r_i)), \bigoplus_{j=0}^m(\vec{\Upsilon}_j\otimes x_{ji})\right)=\left|y_i-\sum_{j=0}^{m} \alpha_j x_{ji}\right|+0.5\left|g(l_i)-\sum_{j=0}^{m} \beta_j x_{ji}\right|
+ +  0.5\left|g(r_i)-\sum_{j=0}^{m} \gamma_j x_{ji}\right|.
+\end{eqnarray*}
+%where
+%$\widetilde{A}=(a,l_a,r_a)$ and $\widetilde{B}=(b,l_b,r_b)$ are two elements in $\mathbb{R}^3$.
+%To minimize the modeling errors, the sum of absolute  error of modeling based on above distance is adopted to formulate an objective function.
+%The multi-objective optimization problem can be formulated as follows.
+%In the proposed approach, a multi-objective optimization model is first formulated.
+To formalize this strategy, we adopt the concept of truncated sum of ordered errors with tuning parameters $h_1$ and $h_2$.
+Indeed, the optimal value of $\vec{\boldsymbol{\Upsilon}}$ is obtained optimizing the following objective functions
+\begin{eqnarray}\label{M4}
+  \min_{\vec{\boldsymbol{\Upsilon}}} O, \qquad O \in \mathcal{O},
+\end{eqnarray}
+where $\mathcal{O}$ is a collection of objective functions defined as
+\begin{eqnarray*}
+  \mathcal{O}  =  \Big\{O(\vec{\boldsymbol{\Upsilon}},h_1,h_2) | 1 \leq h_1 < \frac{n}{4}, \frac{3n}{4} <h_2 \leq n, h_2-h_1+1\geq \frac{n}{2} \Big\},
+\end{eqnarray*}
+in which
+\begin{eqnarray*}
+O(\vec{\boldsymbol{\Upsilon}},h_1,h_2)&=&\frac{\sum_{i=h_1}^{h_2} e_{(i)}}{\sum_{i=1}^{n} e_{(i)}},\\
+e_i &=& \mathcal{D}\left((y_i,g(l_i),h(r_i)), \bigoplus_{j=0}^m(\vec{\Upsilon}_j\otimes x_{ji})\right) \quad i=1,\ldots,n,
+\end{eqnarray*}
+and
+$e_{(1)} \leq \ldots\leq e_{(h_1)} \leq \ldots \leq e_{(h_2)}\leq\ldots\leq e_{(n)}$.
+%\newpage\newpage
+%\textbf{Algorithm:}  Procedure for  estimation of fuzzy regression (\ref{M1}).\\
+%%\textbf{Input:}  An $n \times 1$ fuzzy response vector $\widetilde{\boldsymbol{y}}$ and the corresponding $n\times (m+1)$ predictor matrix $\boldsymbol{X}$.
+%%
+%%\textbf{Output:} The optimal  estimates of coefficient $\widetilde{\boldsymbol{\alpha}}$ and the corresponding outlier points in the dataset.
+%\textbf{Step 1:} Generate every elemental set.\\
+%\textbf{Step 2:} Compute the exactly fitting fuzzy regression model (\ref{M1}) for each elemental set and get the ordered residuals on all data points.\\
+%\textbf{Step 3:} For each objective function $O(\widetilde{\boldsymbol{\alpha}},h_1,h_2)\in\mathcal{O}$ calculate   its value for the generated elemental sets.\\
+%\textbf{Step 4:} Choose $\widehat{\widetilde{\boldsymbol{\alpha}}}_{h_1,h_2}$, which minimizes $O(\widetilde{\boldsymbol{\alpha}},h_1,h_2)$ and collect them as
+%\begin{eqnarray*}
+%  \mathcal{E}  = \Big\{\widehat{\widetilde{\boldsymbol{\alpha}}}_{h_1,h_2} | 1 \leq h_1 < \frac{n}{4}, \frac{3n}{4} <h_2 \leq n,  h_2-h_1+1\geq \frac{n}{2} \Big\}.
+%\end{eqnarray*}
+
+By optimization problem (\ref{M4}), we are trying to select the final optimal solution for estimating the fuzzy regression model (\ref{M1}).
+We will perform the selection process based on the importance of individual objectives and individual points as well as decision makers' judgements and experience.
+Let the deviations of the observations with respect to the solution $\widehat{{\vec{\boldsymbol\Upsilon}}}_{h_1,h_2}$ be calculated as follows
+\begin{eqnarray*}
+e_i^{h_1,h_2}=\mathcal{D}\left((y_i,G_1(l_i),G_2(r_i)), \bigoplus_{j=0}^m(\widehat{\vec{\Upsilon}}^{h_1,h_2}_j\otimes x_{ji})\right), \qquad i=1,\ldots,n.
+\end{eqnarray*}
+To find the best values for $h_1$ and $h_2$, obtain the relative error of each observation as
+\begin{eqnarray*}
+\delta_i^{h_1,h_2}  = \frac{e^{h_1,h_2}_{(i)}}{\sum_{i=1}^n e^{h_1,h_2}_{(i)}}, \qquad i=1,\ldots,n,
+\end{eqnarray*}
+and let $\boldsymbol{\delta}^{h_1,h_2}=(\delta_1^{h_1,h_2},\ldots,\delta_n^{h_1,h_2})$.
+Obviously,
+lower values of $\delta_i^{h_1,h_2}$, for $i=1,\ldots,n$ is   equivalent to better fit of the estimated model to datum $i^{th}$ while
+higher values producing more deviation from the estimated model.
+For each vector $\boldsymbol{\delta}^{h_1,h_2}$   let
+\begin{eqnarray*}
+\Delta(h_1,h_2)=\delta_{h_2+1}^{h_1,h_2}-\delta_{h_2}^{h_1,h_2},
+\end{eqnarray*}
+which determines the difference between the relative deviation of $h_2^{th}$ fitted good data point and the relative deviation of $(h_2+1)^{th}$ fitted bad data point (outlier).
+%Since $h_2$ determines  the number of good data points and $n-h_2$ determines the number of outliers, therefore,
+Seeking higher values of $h_2$ and $\Delta(h_1,h_2)$ are preferred,
+because $\Delta(h_1,h_2)$ determines the gap between good data set and bad data set when both of them are modeled by the same model.
+Thus
+\begin{eqnarray*}
+(\widehat{h}_1,\widehat{h}_2)=\textrm{argmax}_{h_1,h_2}\Delta(h_1,h_2),
+\end{eqnarray*}
+which determines the optimal model in $\mathcal{E}$ for which the deepest substantial difference between the relative fitness values of good data points and bad data points occurs.
+The following model is selected as the  optimal model
+\begin{eqnarray}\label{E4}
+(\widehat{y},\widehat{G_1(l)},\widehat{G_2(r)})= \widehat{\vec{\Upsilon}}_0^{\widehat{h}_1,\widehat{h}_2}\oplus(\widehat{\vec{\Upsilon}}_1^{\widehat{h}_1,\widehat{h}_2} \otimes x_{1}) \oplus\ldots \oplus(\widehat{\vec{\Upsilon}}_m^{\widehat{h}_1,\widehat{h}_2}\otimes x_{m})
+\end{eqnarray}
+Determine the value  $n-\widehat{h}_2$ as the estimated breakdown point for the estimators used to find the solutions.
+Therefore, calculate the corresponding deviations of optimal model (\ref{E4}) as
+\begin{eqnarray*}
+e_i=\mathcal{D}\left((y_i,G_1(l_i),G_2(r_i)),(\widehat{y}_i,\widehat{G_1(l_i)},\widehat{G_2(r_i)})\right), \quad i = 1, 2,\ldots, n.
+\end{eqnarray*}
+Report those observations that generate the values of $\delta_{(\widehat{h}_2+1)},\ldots, \delta_{(n)}$ as the outlier points detected by searching the observation set.
+On the other hand, the value of $\widehat{h}_1-1$ determines the number of data points which have very small amount of errors.
+Also, the value of $\widehat{h}_2-\widehat{h}_1+1$ determines the number of data points which have usual amount of errors.
+
+%In ordinary fuzzy regression optimization problems, a given goodness-of-fit criterion with a single objective function is optimized to find estimations/solutions.
+%In the problem of multi-objective optimization (\ref{M4}), however, more than one objective function are involved \cite{Nas05,Oze00,Sak92,Sen11,Jia19}.
+In the following, optimization problem (\ref{M4}) must be evaluated to find the best solutions. %  by using different values of $h_1$ and $h_2$.
+%which determine a collection of different objective functions.
+%, which is very time consuming and also guarantees efficient solutions only if the actual (unknown) search space is convex.
+Here, both $h_1$ and $h_2$ must be determined properly to  tune the disruptive effects of outliers in the estimation problem.
+The variable $h_2$ determines  the number  of good data points.
+Its domain is between $\frac{3n}{4}$ (at most 25\%  of the dataset are bad data points) and $n$ (there is no outlier point in the dataset).
+%Here, the variable $h_2$ is introduced which represents the number of outliers to which the solution belongs to a set of  good solution.
+As each datum influences the estimation process as well as the regression model more or less, the outliers are compensated by data that produce high value of errors in the estimation process.
+Thus, the objective function of minimizing the effect of outliers can be formulated as minimizing the total sum of the values of $h_2-h_1+1$ of ordered errors.
+In our proposed approach, the outlier determination method is introduced and proposed to select the final optimal solution from the set of candidate solutions.
+First, a decision matrix is constructed based on the obtained candidate solutions which shows the values of optimized objective functions as well as the individual errors of estimation.
+A larger value of $h_2$  indicates the corresponding optimal solution is better, because $h_2$ is the number of good data set.
+The other important point is the gap that each model creates between goodness-of-fit values for the good dataset of size $h_2$ and bad dataset of size $n-h_2$.
+To pick the final decision/solution which estimates the fuzzy regression model, a new algorithm is introduced in details in the next section.
+%the candidate solutions are ranked in descending order based on the relative gap created between goodness-of-fit values for the good dataset and bad dataset by the model and then the first one is selected as the final optimal solution.
+%The usual way of solving the above multi-objective optimization problem is the elemental set approach which is used as one type of multi-objective evolutionary algorithms to solve this kind of problems \cite{Haw99,Rou03,Rou06}.
+%By using the elemental set approach, computing parameter estimates and selecting the ideal values of $h_1$ and $h_2$ for the model (\ref{M1}) are given in Algorithm below.
+%There are no wide-ranging rules and formulas to choose these parameters.
+%To objectively tune these parameters, the following Algorithm is used.
+%The codes has been implemented in JAWWWWWWWA language programing \cite{???}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{algorithm}[t]
+\tiny
+	\caption{findBestParameters(error)}
+	\LinesNumbered
+	% This is to hide end and get the last vertical line straight
+	\SetKwBlock{Begin}{Begin}{}
+	\SetAlgoLined
+	  \Begin{
+	$V \gets 1.0$\;\label{line:V}
+	$\widehat{s} \gets n-1$\;\label{line:Shat}
+	\For{$j\gets 0$ {\bf to} $n$}{
+		$I[j] \gets j$\;\label{line:I}
+	}
+	$i_{A_0} \gets -1$\;\label{line:alpha_0}
+	\For{$i\gets 0$ {\bf to} $n_{A_1} -1$}{
+		\For{$j\gets 0$ {\bf to} $n-1$}{
+			${\rm T}[i][j] \gets A_1[i]\times {\rm M}[j][1]$\;\label{line:tableT}
+		}
+	}
+	$\widehat{\alpha_0} \gets A_0[0]$\;\label{line:fixedalpha_0}
+	$\widehat{\alpha_1} \gets A_1[0]$\;\label{line:fixedalpha_1}
+	\While{$(i_{A_0}<n_{A_0} - 1)$\label{line:while1}}{\For{$j\gets 0$ {\bf to} $n-1$}{
+			${\rm E[j] \gets M[j][2]}$\;		
+		}
+		${i_{A_0} \gets i_{A_0}} + 1$\;
+		${\alpha_0 \gets
+			\rm A_0}[i_{A_0}]$\;
+		$i_{A_1} \gets -1$\;
+		\For{$j\gets 0$ {\bf to} $n$}{
+			${\rm E[j] \gets E[j] - \alpha_0}$\;
+		}
+		\While{$(i_{\alpha_1}<n_{\alpha_1} - 1)$\label{line:while2}}{
+			${i_{\alpha_1} \gets i_{\alpha_1}} + 1$\;
+			${\alpha_1 \gets
+				A_1}[{\rm i_{\alpha_1}}]$\;
+			addAlpha1TermToTheErrorTerm($i_{\alpha_1}$, $\alpha_1$)\;\label{line:meth1}
+			setUpTheObjectiveComputation(sortWithInsertionsort, E, $\alpha_0$, $\alpha_1$)\;
+			substractAlpha1TermFromTheErrorTerm($i_{\alpha_1}$, $\alpha_1$);\label{line:meth3}
+		}	
+	}		
+	  }
+\end{algorithm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Main algorithm based on divide and conquer paradigm}\label{Main_algorithm}
+Normally, as the size of data set increases, one suffers from a huge size of search space (the curse of dimensionality).
+This section takes advantage of powerful techniques in computer science in order to quickly search through the enormous space of possibilities and
+reduce the computational effort required for solving the problem.
+In the following we discuss the detailed implementation of our algorithm with regard to this objective. Notice that the entire implementation was programmed in Java \cite{Dei18}.
+
+
+Suppose that $n$ samples are given as data.
+There are $n$ equations to be solved in order to find the closest line to all of the points.
+Consider the system of equations as:
+\begin{eqnarray*}
+\left\{\begin{array}{ccl}
+\alpha_0 + \alpha_1x_1&=&y_1 \\
+\vdots                &\vdots& \vdots\\
+\alpha_0 + \alpha_1x_n&=&y_n\\
+\end{array}\right.
+\end{eqnarray*}
+By considering $(y_i,g(l_i),g(r_i))$, $i=1,\ldots,n$ two similar systems of equations as the following ought to be solved
+\begin{eqnarray*}
+\left\{\begin{array}{ccl}
+\beta_0 + \beta_1x_1&=&g(l_1) \\
+\vdots              &\vdots& \vdots\\
+\alpha_0 + \alpha_1x_n&=&g(l_n)\\
+\end{array}\right.\\
+\left\{\begin{array}{ccl}
+\gamma_0 + \gamma_1x_1&=&g(r_1) \\
+\vdots              &\vdots& \vdots\\
+\gamma_0 + \gamma_1x_n&=&g(r_n)\\
+\end{array}\right.
+\end{eqnarray*}
+The objective is to detect the best $\alpha_0$, $\alpha_1$, $\beta_0$, $\beta_1$, $\gamma_0$ and $\gamma_1$ that satisfy all equations.
+Let $M$ denote the matrix whose first, second, third and fourth column correspond to all $x_i$s, $y_i$s, $l_i$s and $r_i$s, respectively, for .
+The rest of the text concerns the explanations of the algorithm which finds out the best $\alpha_0$ and $\alpha_1$.
+A similar reasoning holds for seeking the best $\beta_0$, $\beta_1$, $\gamma_0$ and $\gamma_1$.
+
+After solving all $\left( \begin{array}{c} n \\ 2 \end{array} \right)$ combinations of mutual equations, one comes up with two sets of values  $A_0$ and $A_1$, with sizes $n_{A_0}$ and $n_{A_{1}}$, containing all $\alpha_0s$	and $\alpha_1s$, respectively.
+First, we sort the two sets.
+Since $A_0$ and $A_1$ may include duplicate values, in order to prevent duplicate computations, not to mention speeding the algorithm up, we remove all duplicates from $A_0$ and $A_1$.
+For that purpose, we use a linked hash set. This is a data structure which maintains a doubly linked list, running through all of its elements.
+A main feature of this data structure which has been taken advantage of is that it only stores unique elements
+iteration ordering, which is the order in which elements are inserted into the set.
+This property suits our framework, as we want the sets $A_0$ and $A_1$ without duplicate elements.
+In the following we describe the algorithm:
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+\begin{algorithm}[t]
+\tiny
+	\DontPrintSemicolon
+	\caption{setUpTheObjectiveComputation}
+	insertionSortIndices(E)\;
+	$ D \gets {\rm S[E]}$\;
+	${\rm h_1} \gets I[0]$\;
+	${\rm ub} \gets n-1$\;
+	$N \gets D$\;
+	\While{$ub > 3 \times n / 4$}{${\rm h_2} \gets I[ub]$\;
+		$r \gets {N / D}$\;
+		\If{$r < V$}{$V\gets r$\;
+			\If{$\alpha_0 \neq \widehat{A_0}$}{${\rm \widehat{A_0}} \gets \alpha_0$\;
+			}
+			\If{$\alpha_1 \neq \widehat{A_1}$}{${\rm \widehat{A_1}} \gets \alpha_1$\;
+			}
+			\If{$h_2 \neq \widehat{s}$}{${\rm \widehat{s}} \gets {\rm h_2}$\;
+			}
+			${\rm ub} \gets {\rm ub-1}$\;
+			$N \gets {N-E[ub]}$\;
+		}
+	}
+\end{algorithm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Line \ref{line:V}:}
+$V$ denotes the best value of the objective function found so far.
+This value normally gets initialized to 1.0, as at the beginning of the iteration the numerator and denominator equal each other.
+During the iterations over $A_0$ and $A_1$ this value gets updated as better values for the objective function are obtained.
+
+\textbf{Line \ref{line:Shat}}:
+$\widehat{s}$ denotes the sample with best $h_2$ found.
+It is initialized to $n-1$, i.e.  the last sample.
+During the iterations over $A_0$ and $A_1$ this index gets updated as better values for the objective function are obtained.
+
+\textbf{Line \ref{line:I}:}
+$I$ is an array which maintains the indices of samples sorted by the error terms.
+At line \ref{line:I} this array gets filled in so that $I[j] = j$ for every $1\leq j\leq n$.
+This array comes in handy when we apply a powerful sorting strategy in order to sort the error terms.
+
+\textbf{Line \ref{line:alpha_0}:}
+$i_{A_0}$ and $i_{A_1}$ are iterators over $A_0$ and $A_!$.
+They are initialized to -1;
+At each iteration of the corresponding loop they are incremented one unit, so that the next value over $A_0$ or $A_!$ is traversed.
+
+\textbf{Line \ref{line:tableT}:}
+$T[i][j]$ maintains a $n_{A_1} \times n$ table whose cell at row $i$ and column $j$ equals $A_1[i]\times x_{j}$.
+This computation gets done once for every $\alpha_1$ within the inner loop, hence avoiding so many repeated computations throughout the algorithm.
+The entries of this table are used so many times during the algorithm.
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{algorithm}[t]
+\tiny
+	\DontPrintSemicolon
+	\caption{addAlpha1TermToTheErrorTerm}
+	
+	\For{$j\gets 0$ {\bf to} $n$}{
+		\If{$E[i]\geq T[i_{\alpha_1}][i]$}{${\rm E[j] \gets E[j] + (-T[i_{\alpha_1}][i])}$\;}
+		\Else{${\rm E[j] \gets -E[j] + T[i_{\alpha_1}][i]}$\;	
+			$B \gets true$\;
+		}
+	}
+\end{algorithm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{algorithm}[t]
+\tiny
+	\DontPrintSemicolon
+	\caption{insertionSortindices(error)}
+	\For{$i\gets 1$ {\bf to} $n$}{
+		$v \gets {\rm I}[i]$\;
+		$j \gets i-1$\;
+		\While{$j \geq 0$ and {\rm error[I}[j]] $>$ {\rm error}[v]}{
+			I[j + 1] $\gets$ I[j]\;
+			$j\gets j-1$\;	
+		}
+		I[j + 1] $\gets$ v;
+	}
+\end{algorithm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+At every single iteration over $A_0$ or $A_1$ a value is fixed.
+Lines \ref{line:fixedalpha_0} and \ref{line:fixedalpha_1} initialize these variables as $\widehat{\alpha_0}$ and $\widehat{\alpha_1}$.
+$i_{\alpha_0}$ is the iterator over $A_0$.
+
+The algorithm includes two basic loops at lines \ref{line:while1} and \ref{line:while2}.
+For $\widehat{\alpha_0}$ the array $A_1$ is traversed entirely.
+The error term comprises of two  main terms, the first dependent on $\widehat{\alpha_0}$ and the second dependent on $\widehat{\alpha_1}$.
+This vector gets filled in before each objective computation is done (line \ref{line:meth1}) and the value just added gets rid of once the computation is over (line \ref{line:meth3}).
+The method named setUpTheObjectiveComputation computes the best objective value for $\widehat{\alpha_0}$  and  $\widehat{\alpha_1}$  chosen.
+The strength of our algorithm lies within this method. In order to elucidate that, let us introduce a general algorithm design technique, named divide-and-conquer.
+This algorithmic strategy works according to the following general plan: First the problem is divided into several sub problems of the same type.
+Thereafter, the sub problems are solved (typically recursively).
+Ultimately, if necessary, the solutions to the subproblems are combined to get a solution to the original problem.
+One application of such a strategy arises here.
+Insertion sort is a sorting technique whose best case efficiency belongs to $O(n)$.
+This case mainly occurs for the case that in consecutive iterations there is not that much new entries to sort, i.e. the problem is already solved.
+This very good performance in the best case of sorted arrays also occurs in almost-sorted contexts, including in our problem.
+This is due to the fact that the error terms computed in consecutive iterations are not that different.
+Therefore, the indices of ordered tasks have not changed a lot with respect to the previous iteration.
+Now, insertion sort preserves its excellent performance on such a case.
+The experiments verify this fact. In the algorithms below, the method insertionSortindices takes care of this part.
+
+%\\B represents a boolean array whose $i$th entry is true if the sign of the corresponding error term is negative.
+%\\$\widehat{A_0}$ and $\widehat{A_1}$ store the best values found for $\alpha_0$ and $\alpha_1$. These two variables are initialized to the first elements of $A_0$ and $A_1$, however they are changed throughout the algorithm. At the end of iterations, these are the variables in which the best values of $\alpha_0$ and $\alpha_1$ are saved.
+%\\The error array $E$ maintains the error computations according to formula at line 130.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Numerical examples}\label{Exam}
+\subsection{Simulation I}
+A simulation study is used to evaluate the efficiency of proposed approach in detecting outlier points as well as their numbers.
+In the generated dataset the regression coefficients were held constant, and the values of the inputs and the outputs were randomly generated thorough the following mechanism to generate  $i=1,2,\ldots, n$  data points
+\begin{eqnarray*}
+(y_i,\log(l_i),\log(r_i))=(10,   -15,   -40)\oplus((3,    0.1,   0.2)\otimes x_i)\oplus(\varepsilon_i,\varepsilon_i',\varepsilon_i'')
+%x_{i}     & \sim &   \textrm{Uniform}(100,200),                    \\
+%y_i       &  =   &    10  + 3   x_i +      \varepsilon_i,            \\
+%\log(l_i) &  =   &   -20  + 0.1 x_i +      \varepsilon_i',                 \\
+%\log(r_i) & =    &   -25  + 0.2 x_i +      \varepsilon_i',
+\end{eqnarray*}
+where
+\begin{eqnarray*}
+x_{i}            &\sim&   \textrm{U}(100,200),     ~~\qquad\qquad\qquad i=1,\ldots, n\\
+\varepsilon_i    &\sim& \left\{
+\begin{array}{lcl}
+N(0,1)           &    & i=1,\ldots m,\\
+t(df=5,  noc=50) &    & i=m+1,\ldots n.
+\end{array}
+\right.\\
+\varepsilon_i'   &\sim& \left\{
+\begin{array}{lcl}
+N(0,1)           &    & i=1,\ldots m,\\
+t(df=10, noc=10) &    & i=m+1,\ldots n.
+\end{array}
+\right.\\
+\varepsilon_i''  &\sim& \left\{
+\begin{array}{lcl}
+N(0,1)           &    & i=1,\ldots m,\\
+t(df=10, noc=20) &    & i=m+1,\ldots n.
+\end{array}
+\right.
+\end{eqnarray*}
+$N(\mu,\sigma^2)$ is the normal distribution with mean $\mu$ and variance $\sigma^2$, and
+$\textrm{U}(a,b)$ is the uniform distribution on the interval $(a,b)$.
+In this shame the data points  for indices $i=m+1,\ldots,n$ are known as outlier points which are the points that mostly differs from the majority of dataset and have negative affect on the estimation process.
+Notice, in above generated dataset the parameters are set as follows
+\begin{eqnarray*}
+\begin{array}{cclcccl}
+\vec{\Upsilon}_0 & = & (10,   -15,   -40), \\
+\vec{\Upsilon}_1 & = & (3,    0.1,   0.2).
+\end{array}
+\end{eqnarray*}
+%with different kind of outliers.
+%We contaminated each dataset
+By considering different number of outlier points in the dataset generation, the estimated parameters of the model are obtained employing the proposed algorithm.
+It is also investigated  as  shown in Table ?? the performances of the proposed method from different point of view.
+
+
+
+%The elapsed time was ??? seconds.
+%By these results, it is clear that
+%\begin{eqnarray*}
+%\widehat{h}_1&=&\textrm{argmax}_{h_1=?,\ldots,5}   \Delta(h_1)=?.\\
+%\widehat{h}_2&=&\textrm{argmax}_{h_2=16,\ldots,20} \Delta(h_2)=?.
+%\end{eqnarray*}
+%The approach obtains $\widehat{h}_1=??$ and $\widehat{h}_2=??$ which provide  the biggest difference between good data and bad data among the others.
+%Using fuzzy arithmetic, the above model can be written as
+%\begin{eqnarray*}
+%\widehat{\widetilde{y}}=(????? x,????).
+%\end{eqnarray*}
+%As we expected, the value $h_2^*=??$ declares that there are ???? potential outlier points in the dataset.
+%The reported individual deviations of the optimal model in Figure \ref{FIGG}  label outlier points???????????????.
+%The goodness-of-fit results based on the competitive approaches such as least-absolutes fuzzy regression model and least-squares fuzzy regression model are shown in Table ??.
+%It can be concluded  the fitting results based on the proposed approach are all superior than those based on the other approaches.
+%These indicates that the proposed approach outperforms the other competitive fuzzy regression approaches in terms of prediction accuracy (measured by goodness-of-fit criteria) and training errors (measured by TE).
+%The mean RE percent, standard deviation (SD) of RE percent and the mean IC of the validation tests corresponding to the seven approaches were calculated and are shown in Table ??.
+%It can be seen from the table that the models developed based on the proposed approach yield the smallest mean RE percent, the smallest SD of RE percent and the largest mean IC.
+%The following three goodness-of-fit criteria are also used to evaluate the performances of fuzzy regression models \cite{Are14,Cha16a,Cha16b,Cha14,Cha16c,Cha13,Hes18}:
+%\begin{eqnarray*}
+%  S   &=& \frac{1}{n}\sum_{i=1}^n \frac{\int \! \min\{\widetilde{y}_i(t),\widehat{\widetilde{y}}_i(t)\}\, dt}
+%                                    {\int \! \max\{\widetilde{y}_i(t),\widehat{\widetilde{y}}_i(t)\}\, dt},\\
+%  E_1 &=& \frac{1}{n}\sum_{i=1}^n \int \! |\widetilde{y}_i(t)-\widehat{\widetilde{y}}_i(t)|\, dt,\\
+%  E_2 &=& \frac{1}{n}\sum_{i=1}^n \frac{\int \! |\widetilde{y}_i(t)-\widehat{\widetilde{y}}_i(t)|\, dt}{\int \! \widetilde{y}_i(t)\, dt}.
+%\end{eqnarray*}
+%The value of these criteria are obtained for the comparative  models  in Table ???.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[!t]
+\caption{Results in 1000 repeat, $n=100$, $n_1=10$, $n_2=90$}
+\label{Result01}
+\centering
+\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|cccccc|}
+\hline
+                                    &&\multicolumn{4}{c}{Average values of the comparative estimators}             &\\
+\cline{3-6}                              %LA is the M-estimation
+$\overline{\widehat{\vec{\Upsilon}}}_j$&&   M-Estimation  &      $LA$        &        $LS$      &         Chachi \cite{Cha19}      &\\
+\hline
+$\overline{\widehat{\vec{\Upsilon}}}_0$&&(3.6943, 0.42101)&(3.7670,  1.01972)&(12.0233,  0.9227)&(3.6303, 1.0229)     &\\
+$\overline{\widehat{\vec{\Upsilon}}}_1$&&(1.0064, 0.01345)&(1.0125,  0.00993)&( 1.0526,  0.0102)&(1.0131, 0.0102)     &\\
+$\overline{\widehat{\vec{\Upsilon}}}_2$&&(0.8301, 0.14413)&(0.7246, -0.02296)&(-0.1542, -0.0123)&(0.7414,-0.0219)     &\\
+$\overline{\widehat{\vec{\Upsilon}}}_3$&&(0.9481, 0.01490)&(0.9441,  0.00138)&( 0.7019,  0.0043)&(0.9481, 0.0005)     &\\
+$\overline{\widehat{\vec{\Upsilon}}}_4$&&(0.9960, 0.00995)&(0.9969,  0.00947)&( 0.9825,  0.0096)&(0.9973, 0.0094)     &\\
+$\overline{\widehat{\vec{\Upsilon}}}_5$&&(1.0452, 1.01372)&(1.0691,  1.05086)&( 0.8483,  1.0660)&(1.0452, 1.0552)     &\\
+\hline
+$\overline{\widehat{\vec{\Upsilon}}}_0\ominus\vec{\Upsilon}_0$&&( 2.6943, 0.4210)&( 2.7669,  1.0197)&( 11.0233, 0.9227)&( 2.6302,  1.0229)&\\
+$\overline{\widehat{\vec{\Upsilon}}}_1\ominus\vec{\Upsilon}_1$&&( 0.0063, 0.0034)&( 0.0124, -0.0000)&(  0.0526, 0.0002)&( 0.0130,  0.0002)&\\
+$\overline{\widehat{\vec{\Upsilon}}}_2\ominus\vec{\Upsilon}_2$&&(-0.1698, 0.1341)&(-0.2753, -0.0329)&( -1.1541,-0.0223)&(-0.2585, -0.0319)&\\
+$\overline{\widehat{\vec{\Upsilon}}}_3\ominus\vec{\Upsilon}_3$&&(-0.0518, 0.0049)&(-0.0559, -0.0086)&( -0.2980,-0.0056)&(-0.0518, -0.0094)&\\
+$\overline{\widehat{\vec{\Upsilon}}}_4\ominus\vec{\Upsilon}_4$&&(-0.0040,-0.0005)&(-0.0031, -0.0005)&( -0.0175,-0.0003)&(-0.0026, -0.0005)&\\
+$\overline{\widehat{\vec{\Upsilon}}}_5\ominus\vec{\Upsilon}_5$&&( 0.0451, 0.0137)&( 0.0691,  0.0508)&( -0.1516, 0.0660)&( 0.0451,  0.0552)&\\
+\hline
+Bias($\widehat{\vec{\boldsymbol{\Upsilon}}}$)              && 4.1265          &  5.4077          & 14.7313          & 5.2414   & \\
+\hline
+$MSE(\widehat{\beta}_0),MSE(\widehat{\sigma}_0)$&&(18.3658, 0.4357)&(19.1006, 5.2519) & (141.3984, 4.8736)&(19.2853,  5.4507)&\\
+$MSE(\widehat{\beta}_1),MSE(\widehat{\sigma}_1)$&&( 0.0019, 0.0002)&( 0.0015, 0.0004) & (  0.0045, 0.0004)&( 0.0015,  0.0004)&\\
+$MSE(\widehat{\beta}_2),MSE(\widehat{\sigma}_2)$&&( 0.2538, 0.0592)&( 0.2350, 0.0590) & (  1.6484, 0.0560)&( 0.2313,  0.0622)&\\
+$MSE(\widehat{\beta}_3),MSE(\widehat{\sigma}_3)$&&( 0.0149, 0.0003)&( 0.0155, 0.0043) & (  0.1081, 0.0041)&( 0.0162,  0.0045)&\\
+$MSE(\widehat{\beta}_4),MSE(\widehat{\sigma}_4)$&&( 0.0007, 0.0001)&( 0.0005, 0.0001) & (  0.0009, 0.0001)&( 0.0005,  0.0001)&\\
+$MSE(\widehat{\beta}_5),MSE(\widehat{\sigma}_5)$&&( 0.3275, 0.1201)&( 0.2771, 0.0929) & (  0.3580, 0.0965)&( 0.2762,  0.0929)&\\
+\hline
+$MSE(\overline{\widehat{\vec{\Upsilon}}}_0)$&&    19.2372      &      29.6044    &  151.1457         &  30.1867  &\\
+$MSE(\overline{\widehat{\vec{\Upsilon}}}_1)$&&     0.0023      &       0.0023    &    0.0052         &   0.0023  &\\
+$MSE(\overline{\widehat{\vec{\Upsilon}}}_2)$&&     0.3722      &       0.3530    &    1.7604         &   0.3557  &\\
+$MSE(\overline{\widehat{\vec{\Upsilon}}}_3)$&&     0.0155      &       0.0242    &    0.1163         &   0.0253  &\\
+$MSE(\overline{\widehat{\vec{\Upsilon}}}_4)$&&     0.0009      &       0.0007    &    0.0010         &   0.0007  &\\
+$MSE(\overline{\widehat{\vec{\Upsilon}}}_5)$&&     0.5677      &       0.4629    &    0.5509         &   0.4620  &\\
+\hline
+$MSE(\widehat{\vec{\boldsymbol{\Upsilon}}})$&&   19.5802       &    25.0389      &   148.5489        &   25.4219 & \\
+\hline
+eff($\cdot,M_1$)                        &&      ---         &    1.2789       & 7.5866            & 1.2983    &\\
+\hline
+\end{tabular}}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+The competitive fuzzy regression models are fitted to each generated dataset.
+Following the iterative simulated estimation approach,
+we propose a comparative analysis for studying the dependence of a general class of fuzzy linear variables on a set of crisp or fuzzy explanatory variables.
+In order to investigate
+the performance analysis of the comparative models, some
+numerical properties of the estimated coefficients are described as follows
+Furthermore, we illustrate an assessment of the imprecision associated with the estimates of the regression coefficients of the proposed regression model
+\begin{eqnarray*}
+\widehat{\sigma^2_e}(m) &=&\frac{1}{n-1}\sum_{i=1}^{n}(e_i(m)-\overline{e}(m))^2, \\
+\overline{\widehat{\sigma^2_e}}&=&\frac{1}{M} \sum_{m=1}^M  \widehat{\sigma^2_e}(m),\\
+\boldsymbol{e}(m)&=&(e_1(m),\ldots,e_n(m)),\\
+s^2_{\widehat{\sigma^2_e}}&=&\frac{1}{M} \sum_{m=1}^M (\widehat{\sigma^2_e}(m)-\overline{\widehat{\sigma^2_e}})^2,
+\end{eqnarray*}
+\begin{eqnarray*}
+R^2(m)&=&\frac{\sum_{i=1}^{n}(\widehat{y}_i(m)-\overline{y}(m))^2}{\sum_{i=1}^{n}(y_i(m)-\overline{y}(m))^2}, \\
+\overline{R^2}&=&\frac{1}{M} \sum_{m=1}^M  R^2(m),\\
+s_{R^2}  &=&\sqrt{\frac{1}{M} \sum_{m=1}^M  \left(R^2(m)-\overline{R^2}\right)^2},\\
+\overline{\widehat{\vec{\Upsilon}}}_j &=&\left(\frac{1}{M}\sum_{m=1}^M\widehat{\beta}_j(m),\frac{1}{M}\sum_{m=1}^M\widehat{\sigma}_j(m),\frac{1}{M}\sum_{m=1}^M\widehat{\theta}_j(m)\right)
+=\left(\overline{\widehat{\beta}}_j,\overline{\widehat{\sigma}}_j,\overline{\widehat{\theta}}_j\right)
+\end{eqnarray*}
+\begin{eqnarray*}
+\textrm{Bias}(\widehat{\vec{\Upsilon}}_j)            &=& \left|\overline{\widehat{\beta}}_j-\beta_j\right|+\left|\overline{\widehat{\sigma}}_j-\sigma_j\right|+\left|\overline{\widehat{\theta}}_j-\theta_j\right|,\\
+\textrm{Bias}(\widehat{\vec{\Upsilon}}_j)            &=& \overline{\widehat{\vec{\Upsilon}}}_j \ominus \vec{\Upsilon}_j,\\
+\textrm{Bias}(\widehat{\vec{\boldsymbol{\Upsilon}}}) &=& \sum_{j=0}^{5} \textrm{Bias}(\widehat{\vec{\Upsilon}}_j),\\
+s^2_{\widehat{\beta}_j}&=&\frac{1}{M}  \sum_{m=1}^M (\widehat{\beta}_j(m)-\overline{\widehat{\beta}}_j)^2,\\
+s^2_{\widehat{\sigma}_j}&=&\frac{1}{M} \sum_{m=1}^M (\widehat{\sigma}_j(m)-\overline{\widehat{\sigma}}_j)^2,\\
+s^2_{\widehat{\theta}_j}&=&\frac{1}{M} \sum_{m=1}^M (\widehat{\theta}_j(m)-\overline{\widehat{\theta}}_j)^2,
+\end{eqnarray*}
+The Mean of Squared Errors (MSE) of the estimated parameters over the simulation cycle are defined as follows
+\begin{eqnarray*}
+MSE(\widehat{\beta}_j)  &=&\frac{1}{M} \sum_{m=1}^M ( \widehat{\beta}_j(m)- \beta_j)^2,\\
+MSE(\widehat{\sigma}_j) &=&\frac{1}{M} \sum_{m=1}^M (\widehat{\sigma}_j(m)-\sigma_j)^2,\\
+MSE(\widehat{\theta}_j) &=&\frac{1}{M} \sum_{m=1}^M (\widehat{\theta}_j(m)-\theta_j)^2,\\
+MSE(\widehat{\vec{\Upsilon}}_j) &=& MSE(\widehat{\beta}_j)+MSE(\widehat{\sigma}_j)+MSE(\widehat{\theta}_j),\\
+MSE(\widehat{\vec{\boldsymbol{\Upsilon}}}) &=& \sum_{j=0}^{5}MSE(\widehat{\vec{\Upsilon}}_j).
+\end{eqnarray*}
+The  efficiency (eff) of  estimator
+$\widehat{\vec{\boldsymbol{\Upsilon}}}_I$ with respect to
+$\widehat{\vec{\boldsymbol{\Upsilon}}}_{II}$ is obtained as
+\begin{eqnarray*}
+\textrm{eff}(\widehat{\vec{\boldsymbol{\Upsilon}}}_I,\widehat{\vec{\boldsymbol{\Upsilon}}}_{II}) =
+\frac{MSE(\widehat{\vec{\boldsymbol{\Upsilon}}}_{II})}{MSE(\widehat{\vec{\boldsymbol{\Upsilon}}}_{I})}.
+\end{eqnarray*}
+Note that $\textrm{eff}(\widehat{\vec{\boldsymbol{\Upsilon}}}_I,\widehat{\vec{\boldsymbol{\Upsilon}}}_{II})>1$ means that estimator
+$\widehat{\vec{\boldsymbol{\Upsilon}}}_{I}$ is more efficient than estimator
+$\widehat{\vec{\boldsymbol{\Upsilon}}}_{II}$ while both of them are used for the estimation of
+$\vec{\boldsymbol{\Upsilon}}$.
+\begin{eqnarray*}
+\textrm{eff}(\widehat{\boldsymbol{\beta}}_{\textrm{rob.}},\widehat{\boldsymbol{\beta}}_{\textrm{LA}})&=&
+\frac{\sum_{m=1}^M||\widehat{\boldsymbol{\beta}}_{\textrm{LA}}(m)-\boldsymbol\beta||_2^2}
+{\sum_{m=1}^M||\widehat{\boldsymbol{\beta}}_{\textrm{rob.}}(m)-\boldsymbol\beta||_2^2},\\
+\textrm{eff}(\widehat{\boldsymbol{\beta}}_{\textrm{rob.}},\widehat{\boldsymbol{\beta}}_{\textrm{LS}})&=&
+\frac{\sum_{m=1}^M||\widehat{\boldsymbol{\beta}}_{\textrm{LS}}(m)-\boldsymbol\beta||_2^2}
+{\sum_{m=1}^M||\widehat{\boldsymbol{\beta}}_{\textrm{rob.}}(m)-\boldsymbol\beta||_2^2},\\
+\textrm{eff}(\widehat{\boldsymbol{\beta}}_{\textrm{LS}},\widehat{\boldsymbol{\beta}}_{\textrm{LA}})&=&
+\frac{\sum_{m=1}^M||\widehat{\boldsymbol{\beta}}_{\textrm{LA}}(m)-\boldsymbol\beta||_2^2}
+{\sum_{m=1}^M||\widehat{\boldsymbol{\beta}}_{\textrm{LS}}(m)-\boldsymbol\beta||_2^2},
+\end{eqnarray*}
+in which $||\cdot||_2^2$ is the Euclidian norm and $Ef(\cdot,\cdot)$ is the efficiency.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=3.5in,height=3in]{Images/boxplot1.eps}
+%\caption{BOXplot of ERROS of $D(A,B)$ and $D^2(A,B)$ for the competitive models \label{figbox}}
+%\end{figure}
+%%%%%%%%%%%%%%%%
+\begin{table}[t]
+%\renewcommand{\arraystretch}{1.3}
+\caption{Simulation results: Efficiency of the  comparative models in simulation study with different sample sizes ($n$) and different numbers of outliers ($n_2$) over 1000 simulation cycle}
+\label{Result05}
+\centering
+%\tiny
+\begin{tabular}{ccccc}
+\hline
+%\cline{3-10}
+ Sample size  & \#Outlier&       &         &                       \\
+$n$           &$n_2$ &   LA      & LS      &    \cite{Cha19}  \\
+\hline
+              &  10  &    1.28   &    7.58 &        1.29             \\
+100           &  30  &    6.04   &    8.66 &        1.91    \\
+              &  40  &    1.55   &    1.63 &        1.34      \\
+\hline
+              & ~70  &    1.61   &    7.56 &        1.24     \\
+300           & 100  &   35.85   &   35.37 &       13.04     \\
+              & 120  &    3.24   &    2.99 &        3.10             \\
+\hline
+              & ~50  &   1.02    &    8.87 &        0.96        \\
+500           & 100  &   1.05    &    2.92 &        1.08           \\
+              & 200  &   3.97    &    3.81 &        4.79               \\
+\hline
+              & 100  &  1.39     &    6.13 &        1.35      \\
+700           & 200  &  1.77     &    3.49 &        1.39         \\
+              & 300  &  2.39     &    1.60 &        2.54           \\
+\hline
+%              & 200  &           &         &                          \\
+%1000          & 300  &           &         &                          \\
+%              & 400  &           &         &                          \\
+%\hline
+\end{tabular}
+%\normalsize
+\end{table}
+%\end{sidewaystable}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Outlier Detection}\label{Sub2}
+As noted earlier, more than one objective is optimized at the same time in multi-objective optimization problems.
+The objectives in multi-objective optimization problems may or may not conflict each other, but mostly they are conflicting in practice.
+In these problems, multiple optimal solutions exist, and the best among them is chosen, based on the priorities of the designer.  \\\\\\
+
+
+
+
+All the estimated fuzzy coefficients are optimal solutions and a superior  solution to others   can be selected as a feasible solution.
+The final solution must be selected based on role of outlier points in the optimization problem.
+Based on the decision matrix, solution ?? must be chosen as the final solution according to Algorithm.
+Table ?? shows the optimized parameters and the position of the optimized energy criterion, respectively.
+The results show the advantage the multi-objective optimization algorithm.\\\\
+
+The estimation results are also compared with  least-absolutes deviation fuzzy regression model and least-squares fuzzy regression model which are  reference-point-based models.\\\\\\
+
+The outcome illustrates the benefit of the multi-objective optimization method compared with the single-objective optimization method in modeling the simulated dataset.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Simulation I}
+In this section,   sensitivity analysis of the estimated  coefficient is done by using on several simulation studies.
+Based on such simulation the proposed method is compared with three well-known fuzzy regression models.
+Consider the following model
+\begin{eqnarray*}
+(y,\log(l),\log(r)) = \vec{\Upsilon}_0 \oplus (\vec{\Upsilon}_1 \otimes x_1) \oplus\ldots \oplus (\vec{\Upsilon}_5\otimes x_5)
+%                    &=& (\beta_0,\beta_0,\gamma_0) \oplus ((\beta_1,\beta_1,\gamma_1) \otimes x_1) \oplus ((\beta_3,\beta_3,\gamma_3) \otimes x_3),
+%                   &=&  (\beta_0+\beta_1 x_1 + \ldots + \beta_p x_p, \\
+%                   & & \qquad \beta_0+\beta_1 |x_1| + \ldots + \beta_p |x_p|, \nonumber\\
+%                   & & \qquad \gamma_0+\gamma_1 |x_1| + \ldots + \gamma_p |x_p|).\nonumber
+%%                   &=&  \boldsymbol{x}_i \vec{\boldsymbol{\Upsilon}}.
+\end{eqnarray*}
+where
+$\vec{\Upsilon}_j  = (\beta_j,\beta_j,\gamma_j)$, for $j=0,1,\ldots,5$ are the coefficients of the model.
+We generated $M=10^4$ datasets of size $n=100,300,500,700$ observations.
+Each dataset are contaminated with randomly generated   data points of size $n_1$
+thorough the following mechanism ($i=1,2,\ldots,n_1$)
+%and bad data points of size $n_2=n-n_1$.
+%In each dataset the regression coefficients were held constant, and the values of the inputs and the outputs were randomly generated thorough the following mechanism
+%Consider the following data points, generated for $i=1,2,\ldots, n_1$ as the good dataset
+\begin{eqnarray*}
+x_{i1}    & \sim &   \textrm{Uniform}(10,20),                                     \\
+x_{i2}    & \sim &   |\textrm{Uniform}(100,101)-\textrm{Uniform}(100,101)|,       \\
+x_{i3}    & \sim &   \textrm{Normal}(30,1),                                       \\
+x_{i4}    & \sim &   \chi^2(df=20),                                               \\
+x_{i5}    & \sim &   \textrm{Beta}(3,1),                                          \\
+y_i       &  =   &   1  + x_{1i} +      x_{2i}+      x_{3i} +      x_{4i} +  x_{5i} + \varepsilon_i,            \\
+\log(l_i) & \sim &   0.01 x_{1i} + 0.01 x_{2i}+ 0.01 x_{3i} + 0.01 x_{4i} +  x_{5i} + |N(0,0.1)|,             \\
+\log(r_i) & =    &   \log(l_i),
+\end{eqnarray*}
+%where
+%$i=1,2,\ldots,n_1$,
+%$N(\mu,\beta^2)$ is the normal distribution with mean $\mu$ and variance $\beta^2$, and
+%$\textrm{Uniform}(a,b)$ is the uniform distribution on the interval $(a,b)$.
+Sensitivity analysis is the process of tweaking just one input and investigating how it affects the overall model.
+Therefore, in each dataset generation the regression coefficients were held constant, i.e.,
+\begin{eqnarray*}
+\begin{array}{cclcccl}
+\vec{\Upsilon}_0& = & (1,   0,   0), &\qquad&\vec{\Upsilon}_3 & = & (1,0.01,0.01),\\
+\vec{\Upsilon}_1& = & (1,0.01,0.01), &\qquad&\vec{\Upsilon}_4 & = & (1,0.01,0.01), \\
+\vec{\Upsilon}_2& = & (1,0.01,0.01), &\qquad&\vec{\Upsilon}_5 & = & (1,   1,   1).
+\end{array}
+\end{eqnarray*}
+Also, to investigate the performances of the competitive fuzzy regression models, the simulated dataset are contaminated
+%with different kind of outliers.
+%We contaminated each dataset
+by adding an increasing number of outlier points %(from $5\%$ to $30\%$, by steps of $5\%$)
+%in the input and in the output centers
+thorough the following scheme, for $i=n_1+1,\ldots,n$
+%Consider the following data points, generated for $i=1,2,\ldots, n_2$ as the outlier points
+\begin{eqnarray*}
+\varepsilon_i         \sim   \left\{
+\begin{array}{lcl}
+N(0,1)   &  & i=1,\ldots n_1,\\
+t(df=10, noc=10) &  & i=n_1+1,\ldots n.
+\end{array}
+\right.
+\end{eqnarray*}
+where $t(df=10, noc=10)$ is $t$-student distribution with degree of freedom $df=10$ and noncentral tendency parameter $noc=10$.
+%\begin{eqnarray*}
+%x_{i1}    & \sim &    \textrm{Uniform}(10,11)-\textrm{Uniform}(10,12),   \\
+%x_{i2}    & \sim &    \textrm{Uniform}(50,80)                            \\
+%x_{i3}    & \sim &    \textrm{Uniform}(300,500),                         \\
+%y_i       &=     &    1 +     x_{1i}+      x_{2i}+       x_{3i}  + N(0,1),           \\
+%\log(l_i) & \sim &    1 + 0.1 x_{1i}+ 0.01 x_{2i}+ 0.001 x_{3i}  + N(0,0.1),             \\
+%\log(r_i) & =    &    \log(l_i).
+%\end{eqnarray*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\section{Application and results: Case study}\label{Appl}
+%????????????\\
+%??????????\\
+%????????\\
+%??????\\
+%????????????\\
+%??????????\\
+%????????\\
+%??????\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}\label{Conc}
+Although some previous studies have adopted various algorithms to solve multi-objective optimization problems for generating fuzzy regression models, they are all unable to address  outlier problems.
+In addition, such the studies require users subjective judgment of parameter settings for solving multi-objective optimization problems.
+To address the limitations, a multi-objective approach to fuzzy regression models is proposed in this paper.
+In the proposed approach, a multi-objective optimization model for generating fuzzy regression models is formulated which involves the objectives of minimizing the truncated sum of ordered errors, minimizing the modeling errors, minimizing the effect of outliers, determining the number of outliers and labeling the data point as a good data point or bad data point.
+
+It will be found that the algorithm  is able to maintain a better spread of solutions and had better
+convergence than other multi-objective evolutionary algorithms, such as Pareto-archived
+evolution strategy (PAES) and strength-Pareto evolutionary algorithm (SPEA). In this study,
+NSGA-U is introduced to solve the multi-objective optimization model as described in the following.\\\\
+
+
+
+In this study, by introducing the strategy of optimizing a multi-objective target function into fuzzy regression, we proposed a new least trimmed fuzzy regression model for crisp inputs and fuzzy output.
+The parameters of the   fuzzy regression model are estimated using an   algorithm.
+Some experiments are designed to show its performance in the presence of different kinds of outliers in the data set.
+Sixteen validation tests were conducted to compare the performance of the proposed approach with those based on Tanakas fuzzy regression,
+The experimental results suggest that the proposed model is capable of dealing with the data set contaminated by outliers and has high prediction accuracy.
+
+The proposed fuzzy regression method is capable of determining  the ideal number of bad data as well as determining the values of outliers/unusual data points.
+
+It should be mentioned that the execution time of the algorithm depends on the size and dimension of statistical data but the solutions of numerical examples are obtained in a second.
+
+The test results show that the
+proposed approach outperforms the other approaches in terms of training errors and
+prediction accuracy. In this paper, the application of the proposed approach on preference
+modeling is presented.
+The modeling problem described in the case study of the paper involves
+crisp inputs and a fuzzy output. The modeling problem, that involves fuzzy inputs and fuzzy outputs, would be studied in future in order to further validate the effectiveness of the proposed approach. Future work would also involve an extension the proposed approach to
+develop fuzzy polynomial models such that the nonlinearity of modeling can be addressed.
+
+Ordinary least squares estimation places certain restrictive assumptions on
+the random component in the model, the errors of prediction. OLS estimation
+assumes, among others, that the errors of prediction are normally distributed, with
+a common error variance at all levels of   The normality
+assumption is frequently untenable in practice. Violation of this assumption is
+often manifested by the presence of outliers in the observed data. Thus data containing outlying values may reflect non-normal error
+distributions with heavy tails or normal error distributions containing observations atypical of the usual normal distribution with larger variance than the assumed.
+It is well demonstrated that outliers in the sample data heavily influence estimates
+using OLS regression, sometimes even in the presence of one outlier
+
+
+Moreover, the discussions show how similar hybrid algorithms with high accuracy can be used in the future to reduce the overall disruptive effects of outliers while improving the accuracy of prediction.
+
+Due to outlier detection to be adjusted in the proposed method and its superior prediction performance, it can be used in many applications.
+The (trade-off between margin maximization and error minimization), the "which denotes how much error we are willing to allow per data instance, and the value of in RBF should be tuned.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\section{$LR$-Fuzzy numbers}
+A fuzzy set $\widetilde{A}$ on the  real line number   $\mathbb{R}$ is called $LR$-fuzzy number if its membership function $\widetilde{A}(x):\mathbb{R}\rightarrow[0,1]$ is defined as
+\begin{eqnarray*}
+    \widetilde{A}(x)   =   \left\{\begin{array}{lcl}
+                L(\frac{a-x}{l}) &\  \textrm{\ if\ }\  & x\leq a,\\
+                R(\frac{x-a}{r}) &\  \textrm{\ if\ }\  & x> a,
+                \end{array}
+          \right.
+\end{eqnarray*}
+where
+Through this paper it is assumed that  $\mathbb{X}=\mathbb{R}$ (the real line number).
+A specific type of fuzzy sets is the so-called $LR$-fuzzy number denoted by $\widetilde{N} = (n, l, r)_{LR}$ with central value
+$a\in\mathbb{R}$ is the central value,
+$l,r\in\mathbb{R}^+$ are left and right spread values,
+$L,R:\mathbb{R}^+\rightarrow[0,1]$, are decreasing left and right shape functions  with $L(0) = R(0) = 1$  \cite{Kli02}.
+Such $LR$-fuzzy numbers is denoted by $\widetilde{A} = (a, l, r)_{LR}$.
+
+Triangular fuzzy number  $\widetilde{A} = (a, l, r)_T$ is a special case of $LR$-fuzzy numbers  with the following  membership function
+\begin{eqnarray*}
+    \widetilde{A}(x)   =   \left\{\begin{array}{lcl}
+                \frac{x-(a-l)}{l}   &\  \textrm{\ if\ }\  & x-l<x\leq a,\\
+                \frac{a-(x+r)}{r}   &\  \textrm{\ if\ }\  & a<x\leq x+r.
+                \end{array}
+          \right.
+\end{eqnarray*}
+where $\mathcal{I}_{A}$ stands for the characteristic function of a crisp set $A$.
+When $l=r$, the triangular fuzzy number  $\widetilde{A}$  is called symmetric and is abbreviated by $\widetilde{A} = (a,l)_{T}$.
+
+For the algebraic operations on $LR-$fuzzy numbers, we have the following proposition on the basis of Zadeh's Extension Principle (for more details, see \cite{Kli02}).\\
+\begin{proposition}
+Let $\widetilde{A} = (a, l_a, r_a)_{LR}$  and  $\widetilde{B} = (b, l_b, r_b)_{LR}$  be two  $LR-$fuzzy numbers,  and  $\beta\in\mathbb{R}$.
+Then
+\begin{eqnarray*}
+    \beta \otimes\widetilde{A} & = & \left\{\begin{array}{lcl}
+                (\beta a,\beta l_a,\beta r_a)_{LR} &\  \textrm{\ if\ }\  & \beta>0,\\
+                \mathcal{I}_{\{0\}}                                      &\  \textrm{\ if\ }\  & \lambda=0,\\
+                (\beta a,|\beta| r_a ,|\beta| l_a)_{RL} &\  \textrm{\ if\ }\  & \beta<0,
+                \end{array}
+              \right.\\
+\widetilde{A}\oplus \widetilde{B} & = & (a + b, l_a+l_b,r_a+r_b)_{LR}.
+\end{eqnarray*}
+\end{proposition}
+
+
+\begin{eqnarray*}
+    \mathcal{D}(\widetilde{M},\widetilde{N})=\sqrt{\int_0^1 f(\alpha)\left([M_\alpha^l-N_\alpha^l]^2+[M_\alpha^u-N_\alpha^u]^2\right)d\alpha},
+\end{eqnarray*}
+where $f(\alpha)$ is an increased function in the interval $\alpha\in(0,1]$  satisfying $f(0)=0$ and $\int_0^1f(\alpha)d\alpha=0.5$
+(see also  \cite{Are14,Moh04,Xu01}).
+In especial case, the distance between two  symmetric $L$-fuzzy numbers $\widetilde{M}=(m,\lambda_m)_{L}$ and $\widetilde{N}=(n,\lambda_n)_{L}$
+is obtained as follows
+\begin{eqnarray*}
+     \mathcal{D}(\widetilde{M},\widetilde{N})=\sqrt{(m-n)^2+c(\lambda_m-\lambda_n)^2},
+\end{eqnarray*}
+where constant $c$ is defined as $c=\int_0^1 f(\alpha)\left(L^{-1}(\alpha)\right)^2 d\alpha$.
+%%%%        
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%   
+%\section*{Acknowledgement}
+%%The authors wish to express their appreciation for several excellent suggestions for improvements in this paper made by the referees.
+%The Authors would like to thank the reviewers for
+%%careful and thorough reading of this manuscript and for
+%the thoughtful comments and the constructive suggestions which helped to improve the quality of this manuscript.
+%They also appreciate the Editor's warm work earnestly, which helped  to make the manuscript suitable for possible publication in the eminent journal.
+%%The Authors are grateful to the Research Council of Shahid Chamran University of Ahvaz for financial support
+%%(First author's Grant Number:00000000; Second author's Grant Number:00000000; Third author's Grant Number:00000000).
+
+%\bibliographystyle{elsarticle-num}
+\bibliographystyle{plain}
+
+\bibliography{mybibfile}
+%\begin{thebibliography}{10}
+%
+%\bibitem{Ahn17}
+%B.~S. Ahn.
+%\newblock A new approach to solve the constrained owa aggregation problem.
+%\newblock {\em IEEE Transactions on Fuzzy Systems}, \textbf{25}(5):1231--1238, 2017, {\color{blue}DOI://10.1109/TFUZZ.2016.2604006}.
+%
+%
+%\end{thebibliography}
+
+
+
+                                                                    
+
+
+\end{document}
