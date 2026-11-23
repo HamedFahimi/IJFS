@@ -14,6 +14,7 @@
     \usepackage{eqparbox}
     \usepackage{mdwmath}
     \usepackage{array}
+    \usepackage{comment}
 %    \usepackage{algorithm}
     \usepackage{algorithmic}
     \usepackage[linesnumbered,ruled,vlined]{algorithm2e}
@@ -389,7 +390,8 @@ To pick the final decision/solution which estimates the fuzzy regression model, 
 %The codes has been implemented in JAWWWWWWWA language programing \cite{???}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
-\begin{algorithm}[t]
+\begin{comment}
+	\begin{algorithm}[t]
 \tiny
 	\caption{findBestParameters(error)}
 	\LinesNumbered
@@ -432,40 +434,13 @@ To pick the final decision/solution which estimates the fuzzy regression model, 
 	  }
 \end{algorithm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Main algorithm based on divide and conquer paradigm}\label{Main_algorithm}
-Normally, as the size of data set increases, one suffers from a huge size of search space (the curse of dimensionality).
-This section takes advantage of powerful techniques in computer science in order to quickly search through the enormous space of possibilities and
-reduce the computational effort required for solving the problem.
-In the following we discuss the detailed implementation of our algorithm with regard to this objective. Notice that the entire implementation was programmed in Java \cite{Dei18}.
 
+	\section{Main algorithm based on divide and conquer paradigm}\label{Main_algorithm}
+%Normally, as the size of data set increases, one suffers from a huge size of search space (the curse of dimensionality).
+%This section takes advantage of powerful techniques in computer science in order to quickly search through the enormous space of possibilities and
+%reduce the computational effort required for solving the problem.
+%In the following we discuss the detailed implementation of our algorithm with regard to this objective. Notice that the entire implementation was programmed in Java \cite{Dei18}.
 
-Suppose that $n$ samples are given as data.
-There are $n$ equations to be solved in order to find the closest line to all of the points.
-Consider the system of equations as:
-\begin{eqnarray*}
-\left\{\begin{array}{ccl}
-\alpha_0 + \alpha_1x_1&=&y_1 \\
-\vdots                &\vdots& \vdots\\
-\alpha_0 + \alpha_1x_n&=&y_n\\
-\end{array}\right.
-\end{eqnarray*}
-By considering $(y_i,g(l_i),g(r_i))$, $i=1,\ldots,n$ two similar systems of equations as the following ought to be solved
-\begin{eqnarray*}
-\left\{\begin{array}{ccl}
-\beta_0 + \beta_1x_1&=&g(l_1) \\
-\vdots              &\vdots& \vdots\\
-\alpha_0 + \alpha_1x_n&=&g(l_n)\\
-\end{array}\right.\\
-\left\{\begin{array}{ccl}
-\gamma_0 + \gamma_1x_1&=&g(r_1) \\
-\vdots              &\vdots& \vdots\\
-\gamma_0 + \gamma_1x_n&=&g(r_n)\\
-\end{array}\right.
-\end{eqnarray*}
-The objective is to detect the best $\alpha_0$, $\alpha_1$, $\beta_0$, $\beta_1$, $\gamma_0$ and $\gamma_1$ that satisfy all equations.
-Let $M$ denote the matrix whose first, second, third and fourth column correspond to all $x_i$s, $y_i$s, $l_i$s and $r_i$s, respectively, for .
-The rest of the text concerns the explanations of the algorithm which finds out the best $\alpha_0$ and $\alpha_1$.
-A similar reasoning holds for seeking the best $\beta_0$, $\beta_1$, $\gamma_0$ and $\gamma_1$.
 
 After solving all $\left( \begin{array}{c} n \\ 2 \end{array} \right)$ combinations of mutual equations, one comes up with two sets of values  $A_0$ and $A_1$, with sizes $n_{A_0}$ and $n_{A_{1}}$, containing all $\alpha_0s$	and $\alpha_1s$, respectively.
 First, we sort the two sets.
@@ -577,11 +552,44 @@ This is due to the fact that the error terms computed in consecutive iterations 
 Therefore, the indices of ordered tasks have not changed a lot with respect to the previous iteration.
 Now, insertion sort preserves its excellent performance on such a case.
 The experiments verify this fact. In the algorithms below, the method insertionSortindices takes care of this part.
-
+\end{comment}
 %\\B represents a boolean array whose $i$th entry is true if the sign of the corresponding error term is negative.
 %\\$\widehat{A_0}$ and $\widehat{A_1}$ store the best values found for $\alpha_0$ and $\alpha_1$. These two variables are initialized to the first elements of $A_0$ and $A_1$, however they are changed throughout the algorithm. At the end of iterations, these are the variables in which the best values of $\alpha_0$ and $\alpha_1$ are saved.
 %\\The error array $E$ maintains the error computations according to formula at line 130.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Algorithmic discussion}\label{Algor}
+In this section we describe the algorithm used for finding the best solutions.
+Suppose that $n$ samples are given as data.
+There are $n$ equations to be solved in order to find the closest line to all of the points.
+Consider the system of equations as:
+\begin{eqnarray*}
+	\left\{\begin{array}{ccl}
+		\alpha_0x_{01} + \alpha_1x_{11}+ \alpha_2x_{21}+...+\alpha_{(m-1)}x_{{(m-1)}1}&=&y_1 \\
+		\vdots                &\vdots& \vdots\\
+		\alpha_0x_{0n} + \alpha_1x_{1n}+ \alpha_2x_{2n}+...+\alpha_{(m-1)}x_{{(m-1)}n}&=&y_n \\
+	\end{array}\right.
+\end{eqnarray*}
+By considering $(y_i,g(l_i),g(r_i))$, $i=1,\ldots,n$ two similar systems of equations as the following ought to be solved
+\begin{eqnarray*}
+	\left\{\begin{array}{ccl}
+		\beta_0x_{01} + \beta_1x_{11}+ \beta_2x_{21}+...+\beta_{(m-1)}x_{{(m-1)}1}&=&g(l_1) \\
+		\vdots                &\vdots& \vdots\\
+		\beta_0x_{0n} + \beta_1x_{1n}+ \beta_2x_{2n}+...+\beta_{(m-1)}x_{{(m-1)}n}&=&g(l_n) \\
+	\end{array}\right.
+\end{eqnarray*}
+
+\begin{eqnarray*}
+	\left\{\begin{array}{ccl}
+		\gamma_0x_{01} + \gamma_1x_{11}+ \gamma_2x_{21}+...+\gamma_{(m-1)}x_{{(m-1)}1}&=&g(r_1) \\
+		\vdots                &\vdots& \vdots\\
+		\gamma_0x_{0n} + \gamma_1x_{1n}+ \gamma_2x_{2n}+...+\gamma_{(m-1)}x_{{(m-1)}n}&=&g(r_n) \\
+	\end{array}\right.
+\end{eqnarray*}
+The objective is to detect the best $\alpha_0$, $\alpha_1$, $\beta_0$, $\beta_1$, $\gamma_0$ and $\gamma_1$ that satisfy all equations.
+Let $M$ denote the matrix whose first, second, third and fourth column correspond to all $x_i$s, $y_i$s, $l_i$s and $r_i$s, respectively, for .
+The rest of the text concerns the explanations of the algorithm which finds out the best $\alpha_0$ and $\alpha_1$.
+A similar reasoning holds for seeking the best $\beta_0$, $\beta_1$, $\gamma_0$ and $\gamma_1$.
 \section{Numerical examples}\label{Exam}
 \subsection{Simulation I}
 A simulation study is used to evaluate the efficiency of proposed approach in detecting outlier points as well as their numbers.

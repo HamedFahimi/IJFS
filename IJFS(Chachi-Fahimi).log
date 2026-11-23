@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.11.9)  23 NOV 2026 18:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.11.9)  23 NOV 2026 20:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -455,6 +455,10 @@ Package: mdwmath 1996/04/11 1.1 Nice mathematical things
 \sq@sqrt=\count335
 LaTeX Info: Redefining \sqrt on input line 84.
 )
+(C:\Users\LENOVO\AppData\Local\Programs\MiKTeX\tex/latex/comment\comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment')
 (C:\Users\LENOVO\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithmic
 .sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
@@ -560,24 +564,24 @@ File: l3backend-pdftex.def 2026-09-09 L3 backend support: PDF output (pdfTeX)
 ) (IJFS(Chachi-Fahimi).aux)
 \openout1 = `IJFS(Chachi-Fahimi).aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -639,33 +643,33 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 52.
+Package hyperref Info: Link coloring OFF on input line 53.
  (IJFS(Chachi-Fahimi).out) (IJFS(Chachi-Fahimi).out)
-\@outlinefile=\write3
-\openout3 = `IJFS(Chachi-Fahimi).out'.
+\@outlinefile=\write4
+\openout4 = `IJFS(Chachi-Fahimi).out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 96.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 97.
 
 
 (C:\Users\LENOVO\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 96.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 97.
 
 
 (C:\Users\LENOVO\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 96
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 97
 .
 
 (C:\Users\LENOVO\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 96
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 97
 .
 
 (C:\Users\LENOVO\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
@@ -674,12 +678,12 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 <1.jpg, id=68, 228.855pt x 228.855pt>
 File: 1.jpg Graphic file (type jpg)
 <use 1.jpg>
-Package pdftex.def Info: 1.jpg  used on input line 161.
+Package pdftex.def Info: 1.jpg  used on input line 162.
 (pdftex.def)             Requested size: 64.01869pt x 64.0161pt.
 <2.jpg, id=69, 56.502pt x 45.0045pt>
 File: 2.jpg Graphic file (type jpg)
 <use 2.jpg>
-Package pdftex.def Info: 2.jpg  used on input line 161.
+Package pdftex.def Info: 2.jpg  used on input line 162.
 (pdftex.def)             Requested size: 71.13188pt x 56.65855pt.
 
 
@@ -692,387 +696,140 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1{C:/Users/LENOVO/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
  <./1.jpg> <./2.jpg>]
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 214.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 214.
 
+LaTeX Warning: Reference `Main_algorithm' on page 2 undefined on input line 202
+.
+
+
+LaTeX Warning: Reference `Main_algorithm' on page 2 undefined on input line 204
+.
+
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 215.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 215.
 
 Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
- on input line 251.
+ on input line 252.
 
-[2] [3]
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 433.
-
-[4]
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 484.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 485.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 486.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 487.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 488.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 502.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 502.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 502.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 502.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 502.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 502.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 502.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 502.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 502.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 502.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 502.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 502.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 502.
-
-[5]
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 541.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 541.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 541.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 541.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 541.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 541.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 556.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 556.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 556.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 556.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 556.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 556.
-
-
-Package relsize Warning: Font size 3.47223pt is too small.
-(relsize)                Using 5.0pt instead on input line 556.
-
-[6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 830--833
+[2] [3] [4] [5] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 838--841
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 830--833
+Underfull \hbox (badness 10000) in paragraph at lines 838--841
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 830--833
+Underfull \hbox (badness 10000) in paragraph at lines 838--841
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 845--850
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 845--850
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 851--852
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 851--852
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 851--852
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 943--947
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 943--947
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 837--842
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 837--842
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 843--844
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 843--844
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 843--844
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 935--939
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 935--939
-
- []
-
-[11]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 980.
+(hyperref)                removing `math shift' on input line 988.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 980.
+(hyperref)                removing `math shift' on input line 988.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1008--1009
+Underfull \hbox (badness 10000) in paragraph at lines 1016--1017
 
  []
 
-(IJFS(Chachi-Fahimi).bbl [12] [13]) [14] (IJFS(Chachi-Fahimi).aux)
+[10] (IJFS(Chachi-Fahimi).bbl [11]) [12] (IJFS(Chachi-Fahimi).aux)
  ***********
 LaTeX2e <2026-11-01>
 L3 programming layer <2026-09-09>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `IJFS(Chachi-Fahimi).out' has not changed.
-(rerunfilecheck)             Checksum: 73E20626DC698AB34F30D6B523E1BA6D;1520.
+(rerunfilecheck)             Checksum: 2517DAAA450FCD6D69208564943094F1;1357.
  ) 
 Here is how much of TeX's memory you used:
- 14684 strings out of 467310
- 235973 string characters out of 5402328
- 703266 words of memory out of 5000000
- 43731 multiletter control sequences out of 15000+600000
+ 14643 strings out of 467310
+ 235843 string characters out of 5402328
+ 706355 words of memory out of 5000000
+ 43759 multiletter control sequences out of 15000+600000
  647235 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,20n,93p,558b,763s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,17n,93p,558b,581s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\LENOVO\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcr
 m0600.pk> <C:\Users\LENOVO\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
 600\tcrm0800.pk><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmbx10.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmbx5.pfb><C:/Users/LENOVO/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/LENOVO/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/LENOV
-O/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><
-C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmmi12.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmmi5.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/LENOVO/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/LENOVO/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Users/LENOVO
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Use
-rs/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pf
-b><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr17.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmr5.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/LENOVO/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/LENOVO/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/LENOVO/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users
-/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
+TeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/LENOVO/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/LENOVO/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/
+LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 <C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-msy7.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmti10.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmti7.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/LENOVO/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on IJFS(Chachi-Fahimi).pdf (14 pages, 506661 bytes).
+mmi12.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmmi5.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/LENOVO/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Users/LENOVO/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/LENOVO
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Use
+rs/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pf
+b><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr5.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr6.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr7.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/LENOVO/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/LENOVO/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/LENOVO/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users
+/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb
+><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmti9.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/symbols/msbm10.pfb>
+Output written on IJFS(Chachi-Fahimi).pdf (12 pages, 436850 bytes).
 PDF statistics:
- 473 PDF objects out of 1000 (max. 8388607)
- 138 named destinations out of 1000 (max. 500000)
+ 349 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
