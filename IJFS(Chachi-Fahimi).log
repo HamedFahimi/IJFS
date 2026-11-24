@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.11.9)  23 NOV 2026 20:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.11.9)  24 NOV 2026 09:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -675,12 +675,12 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 97
 (C:\Users\LENOVO\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<1.jpg, id=68, 228.855pt x 228.855pt>
+<1.jpg, id=64, 228.855pt x 228.855pt>
 File: 1.jpg Graphic file (type jpg)
 <use 1.jpg>
 Package pdftex.def Info: 1.jpg  used on input line 162.
 (pdftex.def)             Requested size: 64.01869pt x 64.0161pt.
-<2.jpg, id=69, 56.502pt x 45.0045pt>
+<2.jpg, id=65, 56.502pt x 45.0045pt>
 File: 2.jpg Graphic file (type jpg)
 <use 2.jpg>
 Package pdftex.def Info: 2.jpg  used on input line 162.
@@ -712,71 +712,70 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
 Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
  on input line 252.
 
-[2] [3] [4] [5] [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 838--841
+[2] [3] [4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 840--843
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 838--841
+Underfull \hbox (badness 10000) in paragraph at lines 840--843
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 838--841
+Underfull \hbox (badness 10000) in paragraph at lines 840--843
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 847--852
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--850
+Underfull \hbox (badness 10000) in paragraph at lines 847--852
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--850
+Underfull \hbox (badness 10000) in paragraph at lines 853--854
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 851--852
+Underfull \hbox (badness 10000) in paragraph at lines 853--854
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 851--852
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 851--852
+Underfull \hbox (badness 10000) in paragraph at lines 853--854
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 943--947
+Underfull \hbox (badness 10000) in paragraph at lines 945--949
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 943--947
+Underfull \hbox (badness 10000) in paragraph at lines 945--949
 
  []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 990.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 990.
 
 [9]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 988.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 988.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1017
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1019
 
  []
 
-[10] (IJFS(Chachi-Fahimi).bbl [11]) [12] (IJFS(Chachi-Fahimi).aux)
+(IJFS(Chachi-Fahimi).bbl [10]) [11] (IJFS(Chachi-Fahimi).aux)
  ***********
 LaTeX2e <2026-11-01>
 L3 programming layer <2026-09-09>
@@ -786,13 +785,13 @@ L3 programming layer <2026-09-09>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `IJFS(Chachi-Fahimi).out' has not changed.
-(rerunfilecheck)             Checksum: 2517DAAA450FCD6D69208564943094F1;1357.
+(rerunfilecheck)             Checksum: F7F0F8FC41C6731CC5F7925E7B583F8A;1201.
  ) 
 Here is how much of TeX's memory you used:
- 14643 strings out of 467310
- 235843 string characters out of 5402328
- 706355 words of memory out of 5000000
- 43759 multiletter control sequences out of 15000+600000
+ 14639 strings out of 467310
+ 235809 string characters out of 5402328
+ 706310 words of memory out of 5000000
+ 43757 multiletter control sequences out of 15000+600000
  647235 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,17n,93p,558b,581s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -827,9 +826,9 @@ ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users
 ><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmti9.pfb><C:/Users/LENOVO/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/symbols/msbm10.pfb>
-Output written on IJFS(Chachi-Fahimi).pdf (12 pages, 436850 bytes).
+Output written on IJFS(Chachi-Fahimi).pdf (11 pages, 433678 bytes).
 PDF statistics:
- 349 PDF objects out of 1000 (max. 8388607)
- 65 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 341 PDF objects out of 1000 (max. 8388607)
+ 63 named destinations out of 1000 (max. 500000)
+ 75 words of extra memory for PDF output out of 10000 (max. 10000000)
 
